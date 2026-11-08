@@ -27,6 +27,7 @@ def read_chunks() -> list[dict]:
 def embed(model: SentenceTransformer, text: str, label: str) -> list[float]:
     token_ids = model.tokenizer(text, truncation=False)["input_ids"]
     limit = model.max_seq_length
+    print(f"{label} has {len(token_ids)} tokens (limit: {limit})")
 
     if len(token_ids) > limit:
         raise SystemExit(
@@ -54,7 +55,7 @@ def main() -> None:
     model = SentenceTransformer(MODEL_NAME, device="cpu")
 
     if args.command == "preview":
-        chunk = read_chunks()[0]
+        chunk = read_chunks()[8]  # Preview the eighth chunk
         vector = embed_chunk(model, chunk)
 
         print(f"Chunk: {chunk['chunk_id']} | {chunk['heading']}")
@@ -101,7 +102,7 @@ def main() -> None:
             SEARCH c IN (
                 VECTOR INDEX nexus_brd_embeddings
                 FOR $embedding
-                LIMIT 3
+                LIMIT 10
             ) SCORE AS score
             RETURN c.chunk_id AS chunk_id, c.source AS source,
                    c.heading AS heading, c.text AS text, score

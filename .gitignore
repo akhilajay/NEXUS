@@ -17,6 +17,7 @@ dist/
 .ruff_cache/
 
 # Environment variables
+backend/.env
 .env
 .env.*
 

@@ -42,11 +42,17 @@
     "text": "Role | Description | Key Responsibilities\nEmployee | Normal platform user | Create/manage own TODOs; view assigned TODOs; update status.\nTeam Lead | Team-level user | Create/assign TODOs; view team TODOs; monitor overdue work.\nAdministrator | Platform administrator | Manage users and basic platform configuration."
   },
   {
-    "chunk_id": "XATA_TODO_BRD-008",
-    "source": "XATA_TODO_BRD.docx",
-    "heading": "6. Business Requirements",
-    "text": "ID | Requirement | Priority\nBR-001 | System shall allow an authenticated user to create a TODO. | Must\nBR-002 | A TODO shall contain title, description, status, priority and due date. | Must\nBR-003 | Users shall be able to edit TODOs they own or are authorized to manage. | Must\nBR-004 | Users shall be able to mark TODOs as completed. | Must\nBR-005 | Users shall be able to assign a TODO to another authorized user. | Must\nBR-006 | System shall support Open, In Progress and Completed statuses. | Must\nBR-007 | System shall support Low, Medium, High and Critical priorities. | Must\nBR-008 | Users shall filter TODOs by status, priority, assignee and due date. | Must\nBR-009 | Users shall search TODOs by title or description. | Should\nBR-010 | Dashboard shall show Open, In Progress, Completed and Overdue counts. | Must\nBR-011 | Team Leads shall view TODOs assigned to their team members. | Must\nBR-012 | System shall maintain created-by, created-date, updated-by and updated-date. | Must\nBR-013 | Users shall be able to delete TODOs where permitted. | Should\nBR-014 | System shall prevent unauthorized modification of another user's TODO. | Must\nBR-015 | System shall provide a web interface through supported browsers. | Must"
-  },
+  "chunk_id": "XATA_TODO_BRD-008-A",
+  "source": "XATA_TODO_BRD.docx",
+  "heading": "6. Business Requirements",
+  "text": "ID | Requirement | Priority\nBR-001 | System shall allow an authenticated user to create a TODO. | Must\nBR-002 | A TODO shall contain title, description, status, priority and due date. | Must\nBR-003 | Users shall be able to edit TODOs they own or are authorized to manage. | Must\nBR-004 | Users shall be able to mark TODOs as completed. | Must\nBR-005 | Users shall be able to assign a TODO to another authorized user. | Must\nBR-006 | System shall support Open, In Progress and Completed statuses. | Must\nBR-007 | System shall support Low, Medium, High and Critical priorities. | Must\nBR-008 | Users shall filter TODOs by status, priority, assignee and due date. | Must"
+},
+{
+  "chunk_id": "XATA_TODO_BRD-008-B",
+  "source": "XATA_TODO_BRD.docx",
+  "heading": "6. Business Requirements",
+  "text": "ID | Requirement | Priority\nBR-009 | Users shall search TODOs by title or description. | Should\nBR-010 | Dashboard shall show Open, In Progress, Completed and Overdue counts. | Must\nBR-011 | Team Leads shall view TODOs assigned to their team members. | Must\nBR-012 | System shall maintain created-by, created-date, updated-by and updated-date. | Must\nBR-013 | Users shall be able to delete TODOs where permitted. | Should\nBR-014 | System shall prevent unauthorized modification of another user's TODO. | Must\nBR-015 | System shall provide a web interface through supported browsers. | Must"
+},
   {
     "chunk_id": "XATA_TODO_BRD-009",
     "source": "XATA_TODO_BRD.docx",
