@@ -1,0 +1,98 @@
+[
+  {
+    "chunk_id": "XATA_TODO_BRD-001",
+    "source": "XATA_TODO_BRD.docx",
+    "heading": "Introduction",
+    "text": "XATA\n\nBusiness Requirements Document (BRD)\n\nRFP: XATA Enterprise TODO Management Platform\nClient: XATA | Delivery Partner: XBS | Version 1.0"
+  },
+  {
+    "chunk_id": "XATA_TODO_BRD-002",
+    "source": "XATA_TODO_BRD.docx",
+    "heading": "1. Document Purpose",
+    "text": "XATA is issuing this Business Requirements Document to XBS for the design and implementation of a simple enterprise TODO Management Platform. The platform will allow XATA employees to create, manage, prioritize, track and complete personal and team TODO items."
+  },
+  {
+    "chunk_id": "XATA_TODO_BRD-003",
+    "source": "XATA_TODO_BRD.docx",
+    "heading": "2. Business Background",
+    "text": "XATA currently manages TODO items through a combination of email, spreadsheets, chat messages and personal notes. This makes it difficult to maintain a single view of outstanding work, identify overdue items and understand team workload. XATA wants a simple centralized web application that provides a common place to manage TODOs while keeping the first release intentionally small and easy to use."
+  },
+  {
+    "chunk_id": "XATA_TODO_BRD-004",
+    "source": "XATA_TODO_BRD.docx",
+    "heading": "3. Business Objectives",
+    "text": "Provide a single system for managing TODO items.\n\nAllow users to quickly create and update TODOs.\n\nProvide visibility of open, completed and overdue work.\n\nAllow team members to assign TODOs to one another.\n\nProvide basic priority and due-date management.\n\nProvide a simple dashboard for work tracking.\n\nReduce dependency on spreadsheets, email and chat for TODO tracking."
+  },
+  {
+    "chunk_id": "XATA_TODO_BRD-005",
+    "source": "XATA_TODO_BRD.docx",
+    "heading": "4.1 In Scope",
+    "text": "User login and basic user profile.\n\nCreate, view, edit and delete TODOs.\n\nMark TODOs as completed.\n\nAssign TODOs to users.\n\nSet priority and due date.\n\nAdd description and optional notes.\n\nFilter and search TODOs.\n\nDashboard showing TODO status.\n\nBasic team view for assigned TODOs.\n\nAudit information such as created date and updated date."
+  },
+  {
+    "chunk_id": "XATA_TODO_BRD-006",
+    "source": "XATA_TODO_BRD.docx",
+    "heading": "4.2 Out of Scope",
+    "text": "Advanced project management.\n\nGantt charts.\n\nTime tracking.\n\nResource capacity planning.\n\nChat or collaboration features.\n\nFile/document management.\n\nAI-generated TODOs.\n\nMobile native applications.\n\nComplex workflow approvals.\n\nExternal customer access."
+  },
+  {
+    "chunk_id": "XATA_TODO_BRD-007",
+    "source": "XATA_TODO_BRD.docx",
+    "heading": "5. Users and Roles",
+    "text": "Role | Description | Key Responsibilities\nEmployee | Normal platform user | Create/manage own TODOs; view assigned TODOs; update status.\nTeam Lead | Team-level user | Create/assign TODOs; view team TODOs; monitor overdue work.\nAdministrator | Platform administrator | Manage users and basic platform configuration."
+  },
+  {
+    "chunk_id": "XATA_TODO_BRD-008",
+    "source": "XATA_TODO_BRD.docx",
+    "heading": "6. Business Requirements",
+    "text": "ID | Requirement | Priority\nBR-001 | System shall allow an authenticated user to create a TODO. | Must\nBR-002 | A TODO shall contain title, description, status, priority and due date. | Must\nBR-003 | Users shall be able to edit TODOs they own or are authorized to manage. | Must\nBR-004 | Users shall be able to mark TODOs as completed. | Must\nBR-005 | Users shall be able to assign a TODO to another authorized user. | Must\nBR-006 | System shall support Open, In Progress and Completed statuses. | Must\nBR-007 | System shall support Low, Medium, High and Critical priorities. | Must\nBR-008 | Users shall filter TODOs by status, priority, assignee and due date. | Must\nBR-009 | Users shall search TODOs by title or description. | Should\nBR-010 | Dashboard shall show Open, In Progress, Completed and Overdue counts. | Must\nBR-011 | Team Leads shall view TODOs assigned to their team members. | Must\nBR-012 | System shall maintain created-by, created-date, updated-by and updated-date. | Must\nBR-013 | Users shall be able to delete TODOs where permitted. | Should\nBR-014 | System shall prevent unauthorized modification of another user's TODO. | Must\nBR-015 | System shall provide a web interface through supported browsers. | Must"
+  },
+  {
+    "chunk_id": "XATA_TODO_BRD-009",
+    "source": "XATA_TODO_BRD.docx",
+    "heading": "7.1 Create TODO",
+    "text": "Enter title.\n\nEnter description.\n\nSelect priority.\n\nSelect due date.\n\nOptionally assign to a user.\n\nSave the TODO."
+  },
+  {
+    "chunk_id": "XATA_TODO_BRD-010",
+    "source": "XATA_TODO_BRD.docx",
+    "heading": "7.2 Manage TODO",
+    "text": "View details.\n\nEdit information.\n\nChange status.\n\nChange priority or due date.\n\nReassign where authorized.\n\nDelete where authorized."
+  },
+  {
+    "chunk_id": "XATA_TODO_BRD-011",
+    "source": "XATA_TODO_BRD.docx",
+    "heading": "7.3 Dashboard",
+    "text": "Total open TODOs.\n\nIn-progress TODOs.\n\nCompleted TODOs.\n\nOverdue TODOs.\n\nHigh/Critical priority TODOs."
+  },
+  {
+    "chunk_id": "XATA_TODO_BRD-012",
+    "source": "XATA_TODO_BRD.docx",
+    "heading": "8. Business Rules",
+    "text": "A TODO must have a title.\n\nA due date cannot be earlier than creation date unless explicitly permitted.\n\nCompleted TODOs must have Completed status.\n\nOnly authorized users can assign or modify TODOs.\n\nOverdue means due date has passed and status is not Completed.\n\nDeleting a TODO must not delete the user account or other TODOs."
+  },
+  {
+    "chunk_id": "XATA_TODO_BRD-013",
+    "source": "XATA_TODO_BRD.docx",
+    "heading": "9. Assumptions",
+    "text": "XATA will provide the user list and team structure.\n\nXATA will provide branding requirements.\n\nInitial release is web-based.\n\nXBS will propose the technical architecture based on the BRD and NFR.\n\nFirst release will use a single enterprise environment."
+  },
+  {
+    "chunk_id": "XATA_TODO_BRD-014",
+    "source": "XATA_TODO_BRD.docx",
+    "heading": "10. Acceptance Criteria",
+    "text": "User can log in and create a TODO.\n\nTODO can be assigned, updated and completed.\n\nDashboard counts correctly reflect TODO state.\n\nUsers cannot modify TODOs outside their authorization.\n\nFiltering and search return correct results.\n\nApplication meets agreed NFRs.\n\nXATA can complete the core TODO lifecycle without administrator assistance."
+  },
+  {
+    "chunk_id": "XATA_TODO_BRD-015",
+    "source": "XATA_TODO_BRD.docx",
+    "heading": "11. Stakeholders",
+    "text": "Organization | Role\nXATA | Business Owner / Client\nXBS | Implementation Partner\nXATA Business Users | End Users\nXATA IT | Technical / Operational Stakeholders"
+  },
+  {
+    "chunk_id": "XATA_TODO_BRD-016",
+    "source": "XATA_TODO_BRD.docx",
+    "heading": "12. Approval",
+    "text": "This BRD represents the business requirements provided by XATA to XBS for solution design and implementation. Detailed technical design and implementation decisions are to be proposed by XBS and agreed with XATA."
+  }
+]
