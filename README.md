@@ -1,4 +1,5 @@
 # NEXUS
+NEXUS is an agentic platform where specialized AI agents collaborate like a real proposal team—analyzing the RFP, deriving requirements, designing solutions, preparing the proposal, reviewing it, and maintaining traceability back to the source.
 
 NEXUS is a Python-based project for ingesting BRD documents, chunking them, and embedding the resulting text into Neo4j for semantic search.
 
