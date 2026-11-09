@@ -1,4 +1,5 @@
-# NEXUS — Agentic RFP proposal platform
+# NEXUS
+NEXUS is an agentic platform where specialized AI agents collaborate like a real proposal team—analyzing the RFP, deriving requirements, designing solutions, preparing the proposal, reviewing it, and maintaining traceability back to the source.
 
 NEXUS will turn a business requirements document (BRD) and non-functional requirements (NFRs) into a functional document, a solution architecture diagram, and a technology stack recommendation for human review.
 
