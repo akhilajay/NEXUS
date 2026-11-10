@@ -11,6 +11,7 @@ from sentence_transformers import SentenceTransformer
 BACKEND_DIR = Path(__file__).resolve().parents[2]
 CHUNKS_FILE = BACKEND_DIR / "data" / "output" / "brd_chunks.json"
 MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
+MODEL_DIR = BACKEND_DIR / "models" / "all-MiniLM-L6-v2"
 
 
 def read_chunks() -> list[dict]:
@@ -52,7 +53,7 @@ def main() -> None:
     search.add_argument("question")
     args = parser.parse_args()
 
-    model = SentenceTransformer(MODEL_NAME, device="cpu")
+    model = SentenceTransformer(str(MODEL_DIR), device="cpu",local_files_only=True) # load the model from local directory
 
     if args.command == "preview":
         chunk = read_chunks()[8]  # Preview the eighth chunk
