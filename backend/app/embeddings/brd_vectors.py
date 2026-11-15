@@ -63,7 +63,7 @@ def main() -> None:
         print(f"First five values: {vector[:5]}")
         return
 
-    load_dotenv(BACKEND_DIR / ".env")
+    load_dotenv(BACKEND_DIR / ".env",override=True)
     database = os.getenv("NEO4J_DATABASE", "neo4j")
     auth = (os.environ["NEO4J_USERNAME"], os.environ["NEO4J_PASSWORD"])
 
