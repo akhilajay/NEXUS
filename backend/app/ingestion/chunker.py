@@ -28,36 +28,46 @@ def create_chunks(
             ],
         })
 
-    for block in blocks:
-        heading = block["heading"]
-        single_text = f"{heading}\n\n{block['text']}"
+    def fits(heading: str, text: str) -> bool:
+        return embeddings.token_count(f"{heading}\n\n{text}") <= embeddings.token_limit
 
-        if embeddings.token_count(single_text) > embeddings.token_limit:
+    def split_block(heading: str, text: str, location: str):
+        if fits(heading, text):
+            yield text
+            return
+
+        if len(text) <= 1 or not fits(heading, ""):
             raise ValueError(
-                f"{source}: {block['location']} under '{heading}' "
-                "is too long as a single paragraph or table row. "
-                "Split this block before ingestion."
+                f"{source}: no room for text under {heading!r} at {location} "
+                f"within the {embeddings.token_limit}-token limit."
             )
 
+        # Prefer a word boundary near the middle. A long unbroken word
+        # can still be split by character and checked using the tokenizer.
+        middle = len(text) // 2
+        boundary = text.rfind(" ", middle // 2, middle + 1)
+        if boundary <= 0:
+            boundary = middle
+        yield from split_block(heading, text[:boundary].rstrip(), location)
+        yield from split_block(heading, text[boundary:].lstrip(), location)
+
+    for block in blocks:
+        heading = block["heading"]
         if current_blocks and heading != current_heading:
             save_chunk()
             current_blocks = []
 
         current_heading = heading
 
-        candidate_text = "\n\n".join(
-            item["text"] for item in current_blocks + [block]
-        )
-        candidate = f"{heading}\n\n{candidate_text}"
+        for part in split_block(heading, block["text"], block["location"]):
+            if current_blocks:
+                candidate_text = "\n\n".join(
+                    [item["text"] for item in current_blocks] + [part]
+                )
+                if not fits(heading, candidate_text):
+                    save_chunk()
+                    current_blocks = []
 
-        if (
-            current_blocks
-            and embeddings.token_count(candidate) > embeddings.token_limit
-        ):
-            save_chunk()
-            current_blocks = []
-
-        current_blocks.append(block)
-
+            current_blocks.append({**block, "text": part})
     save_chunk()
     return chunks

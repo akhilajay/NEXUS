@@ -39,7 +39,9 @@ class EmbeddingService:
         return len(
             self.model.tokenizer(
                 text,
+                add_special_tokens=True,
                 truncation=False,
+                verbose=False,  # Candidate chunks can exceed the limit.
             )["input_ids"]
         )
 

@@ -49,21 +49,34 @@ class Neo4jStore:
         records, _, _ = self.driver.execute_query(
             """
             SHOW VECTOR INDEXES
-            YIELD name, options
+            YIELD name, labelsOrTypes, properties, options
             WHERE name = 'nexus_brd_embeddings'
-            RETURN options
+            RETURN labelsOrTypes, properties, options
             """,
             database_=self.database,
         )
 
-        configuration = records[0]["options"]["indexConfig"]
+        if not records:
+            raise ValueError("Vector index 'nexus_brd_embeddings' was not found.")
+
+        index = records[0]
+        configuration = index["options"]["indexConfig"]
+        dimensions = configuration.get("vector.dimensions")
+        similarity = configuration.get("vector.similarity_function")
+        labels = index["labelsOrTypes"]
+        properties = index["properties"]
 
         if (
-            configuration.get("vector.dimensions") != 384
-            or configuration.get("vector.similarity_function") != "cosine"
+            labels != ["NexusChunk"]
+            or properties != ["embedding"]
+            or dimensions != 384
+            or str(similarity).casefold() != "cosine"
         ):
             raise ValueError(
-                "Existing vector index does not match MiniLM configuration."
+                "Expected 'nexus_brd_embeddings' on NexusChunk.embedding "
+                "with 384 dimensions and cosine similarity. "
+                f"Found labels={labels!r}, properties={properties!r}, "
+                f"dimensions={dimensions!r}, similarity={similarity!r}."
             )
 
     def replace_document(self, source: str, rows: list[dict]):
@@ -125,3 +138,35 @@ class Neo4jStore:
 
     def close(self):
         self.driver.close()
+
+
+    def load_chunks_by_source(self, sources: list[str]) -> list[dict]:
+        records, _, _ = self.driver.execute_query(
+            """
+            MATCH (c:NexusChunk)
+            WHERE c.source IN $sources
+            RETURN c.chunk_id AS chunk_id,
+                   c.source AS source,
+                   c.document_type AS document_type,
+                   c.heading AS heading,
+                   c.text AS text,
+                   c.locations AS locations
+            ORDER BY source, chunk_id
+            """,
+            sources=sources,
+            database_=self.database,
+            routing_="r",
+        )
+
+        chunks = [dict(record) for record in records]
+
+        found_sources = {chunk["source"] for chunk in chunks}
+        missing_sources = sorted(set(sources) - found_sources)
+
+        if missing_sources:
+            raise ValueError(
+                f"No chunks found for: {', '.join(missing_sources)}. "
+                "Check the filenames or ingest the missing documents first."
+            )
+
+        return chunks

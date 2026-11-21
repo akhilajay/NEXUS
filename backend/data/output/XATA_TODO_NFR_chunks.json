@@ -1,0 +1,230 @@
+[
+  {
+    "chunk_id": "XATA_TODO_NFR.docx-001",
+    "source": "XATA_TODO_NFR.docx",
+    "document_type": "NFR",
+    "heading": "Introduction",
+    "text": "XATA\n\nNon-Functional Requirements (NFR)\n\nRFP: XATA Enterprise TODO Management Platform\nClient: XATA | Delivery Partner: XBS | Version 1.0",
+    "locations": [
+      "body-block-1",
+      "body-block-2",
+      "body-block-3"
+    ]
+  },
+  {
+    "chunk_id": "XATA_TODO_NFR.docx-002",
+    "source": "XATA_TODO_NFR.docx",
+    "document_type": "NFR",
+    "heading": "1. Purpose",
+    "text": "This document defines the non-functional requirements that XATA expects XBS to consider when designing and implementing the TODO Management Platform.",
+    "locations": [
+      "body-block-5"
+    ]
+  },
+  {
+    "chunk_id": "XATA_TODO_NFR.docx-003",
+    "source": "XATA_TODO_NFR.docx",
+    "document_type": "NFR",
+    "heading": "2. Performance",
+    "text": "ID | Requirement | Target\nNFR-PERF-001 | Normal page/API response time | ≤ 2 seconds for 95% of requests under normal load\n\nID | Requirement | Target\nNFR-PERF-002 | TODO create/update operation | ≤ 2 seconds for 95% of requests\n\nID | Requirement | Target\nNFR-PERF-003 | Dashboard loading | ≤ 3 seconds for 95% of requests\n\nID | Requirement | Target\nNFR-PERF-004 | Search/filter response | ≤ 2 seconds for 95% of requests\n\nID | Requirement | Target\nNFR-PERF-005 | Concurrent active users | At least 500",
+    "locations": [
+      "body-block-7-row-2",
+      "body-block-7-row-3",
+      "body-block-7-row-4",
+      "body-block-7-row-5",
+      "body-block-7-row-6"
+    ]
+  },
+  {
+    "chunk_id": "XATA_TODO_NFR.docx-004",
+    "source": "XATA_TODO_NFR.docx",
+    "document_type": "NFR",
+    "heading": "3. Availability",
+    "text": "ID | Requirement | Target\nNFR-AVL-001 | Monthly availability | ≥ 99.5%, excluding agreed maintenance windows\n\nID | Requirement | Target\nNFR-AVL-002 | Planned maintenance | Communicated ≥24 hours in advance\n\nID | Requirement | Target\nNFR-AVL-003 | Recovery after application failure | Service restored within 30 minutes",
+    "locations": [
+      "body-block-9-row-2",
+      "body-block-9-row-3",
+      "body-block-9-row-4"
+    ]
+  },
+  {
+    "chunk_id": "XATA_TODO_NFR.docx-005",
+    "source": "XATA_TODO_NFR.docx",
+    "document_type": "NFR",
+    "heading": "4. Scalability",
+    "text": "Support growth in users and TODO volume without major redesign.\n\nSupport at least 100,000 TODO records initially.\n\nApplication services should be horizontally scalable where practical.\n\nDatabase design shall support future growth beyond initial capacity.",
+    "locations": [
+      "body-block-11",
+      "body-block-12",
+      "body-block-13",
+      "body-block-14"
+    ]
+  },
+  {
+    "chunk_id": "XATA_TODO_NFR.docx-006",
+    "source": "XATA_TODO_NFR.docx",
+    "document_type": "NFR",
+    "heading": "5. Security",
+    "text": "All users shall be authenticated before protected functionality.\n\nAuthorization shall be role-based.\n\nUsers shall only access TODO data permitted by their role.\n\nData shall be encrypted in transit using HTTPS/TLS.\n\nSensitive credentials shall not be hard-coded.\n\nPasswords, if locally managed, shall use secure industry-standard hashing.\n\nApplication shall protect against common web vulnerabilities including injection, broken access control and XSS.\n\nAdministrative actions should be auditable.",
+    "locations": [
+      "body-block-16",
+      "body-block-17",
+      "body-block-18",
+      "body-block-19",
+      "body-block-20",
+      "body-block-21",
+      "body-block-22",
+      "body-block-23"
+    ]
+  },
+  {
+    "chunk_id": "XATA_TODO_NFR.docx-007",
+    "source": "XATA_TODO_NFR.docx",
+    "document_type": "NFR",
+    "heading": "6. Data & Integrity",
+    "text": "TODO records shall have unique identifiers.\n\nRequired fields shall be validated server-side.\n\nUpdates shall not silently overwrite conflicting data.\n\nCreated/updated timestamps shall be stored consistently.\n\nReferential integrity shall be maintained between TODOs and users.\n\nDeleted data handling shall follow XATA's retention policy.",
+    "locations": [
+      "body-block-25",
+      "body-block-26",
+      "body-block-27",
+      "body-block-28",
+      "body-block-29",
+      "body-block-30"
+    ]
+  },
+  {
+    "chunk_id": "XATA_TODO_NFR.docx-008",
+    "source": "XATA_TODO_NFR.docx",
+    "document_type": "NFR",
+    "heading": "7. Usability",
+    "text": "Core create/update/complete flow should require minimal steps.\n\nUI shall be responsive for standard desktop and tablet screens.\n\nValidation errors shall be understandable.\n\nStatus, priority and overdue items shall be visually distinguishable.\n\nCommon actions shall be discoverable without technical knowledge.",
+    "locations": [
+      "body-block-32",
+      "body-block-33",
+      "body-block-34",
+      "body-block-35",
+      "body-block-36"
+    ]
+  },
+  {
+    "chunk_id": "XATA_TODO_NFR.docx-009",
+    "source": "XATA_TODO_NFR.docx",
+    "document_type": "NFR",
+    "heading": "8. Accessibility",
+    "text": "Target WCAG 2.1 AA principles where practical.\n\nKeyboard navigation should support core workflows.\n\nForm controls should have meaningful labels.\n\nText should have sufficient contrast and readable sizing.",
+    "locations": [
+      "body-block-38",
+      "body-block-39",
+      "body-block-40",
+      "body-block-41"
+    ]
+  },
+  {
+    "chunk_id": "XATA_TODO_NFR.docx-010",
+    "source": "XATA_TODO_NFR.docx",
+    "document_type": "NFR",
+    "heading": "9. Maintainability",
+    "text": "Solution shall use modular, maintainable code.\n\nBusiness logic shall be separated from presentation and persistence.\n\nAPIs and major components shall be documented.\n\nAutomated unit tests shall cover critical business logic.\n\nConfiguration shall be externalized from source code.\n\nLogging shall support troubleshooting without exposing sensitive information.",
+    "locations": [
+      "body-block-43",
+      "body-block-44",
+      "body-block-45",
+      "body-block-46",
+      "body-block-47",
+      "body-block-48"
+    ]
+  },
+  {
+    "chunk_id": "XATA_TODO_NFR.docx-011",
+    "source": "XATA_TODO_NFR.docx",
+    "document_type": "NFR",
+    "heading": "10. Observability & Operations",
+    "text": "Application errors shall be logged with sufficient troubleshooting context.\n\nHealth checks shall be available.\n\nKey metrics should include request failures and response latency.\n\nLogs should include correlation/request identifiers where appropriate.\n\nOperational alerts should be configurable for service failures.",
+    "locations": [
+      "body-block-50",
+      "body-block-51",
+      "body-block-52",
+      "body-block-53",
+      "body-block-54"
+    ]
+  },
+  {
+    "chunk_id": "XATA_TODO_NFR.docx-012",
+    "source": "XATA_TODO_NFR.docx",
+    "document_type": "NFR",
+    "heading": "11. Backup & Recovery",
+    "text": "Production data shall be backed up according to an agreed schedule.\n\nBackups shall be protected from unauthorized access.\n\nSolution shall support restoration after major failure.\n\nTarget RPO: 15 minutes unless XATA agrees otherwise.\n\nTarget RTO: 30 minutes.",
+    "locations": [
+      "body-block-56",
+      "body-block-57",
+      "body-block-58",
+      "body-block-59",
+      "body-block-60"
+    ]
+  },
+  {
+    "chunk_id": "XATA_TODO_NFR.docx-013",
+    "source": "XATA_TODO_NFR.docx",
+    "document_type": "NFR",
+    "heading": "12. Compatibility",
+    "text": "Support current versions of major enterprise browsers such as Chrome and Edge.\n\nAvoid browser-specific functionality unless approved.\n\nAPIs should use documented, versionable interfaces.",
+    "locations": [
+      "body-block-62",
+      "body-block-63",
+      "body-block-64"
+    ]
+  },
+  {
+    "chunk_id": "XATA_TODO_NFR.docx-014",
+    "source": "XATA_TODO_NFR.docx",
+    "document_type": "NFR",
+    "heading": "13. Privacy",
+    "text": "Collect only data required for TODO management.\n\nAccess to personal/team information shall follow XATA authorization rules.\n\nSensitive information shall not be written to application logs.\n\nData retention and deletion shall follow XATA policy.",
+    "locations": [
+      "body-block-66",
+      "body-block-67",
+      "body-block-68",
+      "body-block-69"
+    ]
+  },
+  {
+    "chunk_id": "XATA_TODO_NFR.docx-015",
+    "source": "XATA_TODO_NFR.docx",
+    "document_type": "NFR",
+    "heading": "14. Disaster Recovery",
+    "text": "Critical application/database components shall have documented recovery procedures.\n\nRecovery procedures shall be tested periodically.\n\nXBS shall document dependencies required to restore the service.",
+    "locations": [
+      "body-block-71",
+      "body-block-72",
+      "body-block-73"
+    ]
+  },
+  {
+    "chunk_id": "XATA_TODO_NFR.docx-016",
+    "source": "XATA_TODO_NFR.docx",
+    "document_type": "NFR",
+    "heading": "15. NFR Acceptance",
+    "text": "XBS shall demonstrate compliance with agreed NFRs through appropriate testing, evidence, configuration review and operational validation before production acceptance.",
+    "locations": [
+      "body-block-75"
+    ]
+  },
+  {
+    "chunk_id": "XATA_TODO_NFR.docx-017",
+    "source": "XATA_TODO_NFR.docx",
+    "document_type": "NFR",
+    "heading": "16. Priority",
+    "text": "Category | Priority\nSecurity | Must\n\nCategory | Priority\nPerformance | Must\n\nCategory | Priority\nAvailability | Must\n\nCategory | Priority\nData Integrity | Must\n\nCategory | Priority\nBackup & Recovery | Must\n\nCategory | Priority\nUsability | Must\n\nCategory | Priority\nMaintainability | Must\n\nCategory | Priority\nAccessibility | Should\n\nCategory | Priority\nAdvanced observability | Should",
+    "locations": [
+      "body-block-77-row-2",
+      "body-block-77-row-3",
+      "body-block-77-row-4",
+      "body-block-77-row-5",
+      "body-block-77-row-6",
+      "body-block-77-row-7",
+      "body-block-77-row-8",
+      "body-block-77-row-9",
+      "body-block-77-row-10"
+    ]
+  }
+]
