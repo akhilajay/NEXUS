@@ -1,0 +1,2440 @@
+{
+  "requirements": [
+    {
+      "requirement_id": null,
+      "kind": "functional",
+      "statement": "The platform shall allow XATA employees to create, manage, prioritize, track and complete personal and team TODO items.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-002",
+          "locations": [
+            "body-block-5"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "functional",
+      "statement": "The solution shall provide a single, centralized web application as the common place to manage TODO items.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-003",
+          "locations": [
+            "body-block-7"
+          ]
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-004",
+          "locations": [
+            "body-block-9"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "functional",
+      "statement": "Users shall be able to quickly create and update TODO items.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-004",
+          "locations": [
+            "body-block-10"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "functional",
+      "statement": "The solution shall provide visibility of open, completed and overdue TODO work.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-004",
+          "locations": [
+            "body-block-11"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "functional",
+      "statement": "Team members shall be able to assign TODO items to one another.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-004",
+          "locations": [
+            "body-block-12"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "functional",
+      "statement": "The solution shall provide basic priority and due-date management for TODO items.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-004",
+          "locations": [
+            "body-block-13"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "functional",
+      "statement": "The solution shall provide a simple dashboard for work tracking.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-004",
+          "locations": [
+            "body-block-14"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "The first release shall be intentionally small and easy to use.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-003",
+          "locations": [
+            "body-block-7"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "The solution shall reduce dependency on spreadsheets, email and chat for TODO tracking.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-004",
+          "locations": [
+            "body-block-15"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "BR-001",
+      "kind": "functional",
+      "statement": "System shall allow an authenticated user to create a TODO.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-008",
+          "locations": [
+            "body-block-42-row-2"
+          ]
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-005",
+          "locations": [
+            "body-block-19"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "BR-002",
+      "kind": "functional",
+      "statement": "A TODO shall contain title, description, status, priority and due date. Users shall be able to set priority and due date.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-008",
+          "locations": [
+            "body-block-42-row-3"
+          ]
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-005",
+          "locations": [
+            "body-block-22"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "BR-003",
+      "kind": "functional",
+      "statement": "Users shall be able to edit TODOs they own or are authorized to manage.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-008",
+          "locations": [
+            "body-block-42-row-4"
+          ]
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-005",
+          "locations": [
+            "body-block-19"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "BR-004",
+      "kind": "functional",
+      "statement": "Users shall be able to mark TODOs as completed.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-008",
+          "locations": [
+            "body-block-42-row-5"
+          ]
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-005",
+          "locations": [
+            "body-block-20"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "BR-005",
+      "kind": "functional",
+      "statement": "Users shall be able to assign a TODO to another authorized user.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-008",
+          "locations": [
+            "body-block-42-row-6"
+          ]
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-005",
+          "locations": [
+            "body-block-21"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "BR-006",
+      "kind": "functional",
+      "statement": "System shall support Open, In Progress and Completed statuses.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-008",
+          "locations": [
+            "body-block-42-row-7"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "BR-007",
+      "kind": "functional",
+      "statement": "System shall support Low, Medium, High and Critical priorities.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-008",
+          "locations": [
+            "body-block-42-row-8"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "BR-008",
+      "kind": "functional",
+      "statement": "Users shall filter TODOs by status, priority, assignee and due date.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-008",
+          "locations": [
+            "body-block-42-row-9"
+          ]
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-005",
+          "locations": [
+            "body-block-24"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "BR-009",
+      "kind": "functional",
+      "statement": "Users shall search TODOs by title or description.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-008",
+          "locations": [
+            "body-block-42-row-10"
+          ]
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-005",
+          "locations": [
+            "body-block-24"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "functional",
+      "statement": "Support user login and a basic user profile.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-005",
+          "locations": [
+            "body-block-18"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "functional",
+      "statement": "Users shall be able to view and delete TODOs.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-005",
+          "locations": [
+            "body-block-19"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "functional",
+      "statement": "TODOs shall support a description and optional notes.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-005",
+          "locations": [
+            "body-block-23"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "functional",
+      "statement": "Provide a dashboard showing TODO status.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-005",
+          "locations": [
+            "body-block-25"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "functional",
+      "statement": "Provide a basic team view for assigned TODOs.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-005",
+          "locations": [
+            "body-block-26"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "functional",
+      "statement": "Maintain audit information such as created date and updated date for TODOs.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-005",
+          "locations": [
+            "body-block-27"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "functional",
+      "statement": "Employee role: create and manage own TODOs, view assigned TODOs, and update status.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-007",
+          "locations": [
+            "body-block-40-row-2"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "functional",
+      "statement": "Team Lead role: create and assign TODOs, view team TODOs, and monitor overdue work.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-007",
+          "locations": [
+            "body-block-40-row-3"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "functional",
+      "statement": "Administrator role: manage users and basic platform configuration.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-007",
+          "locations": [
+            "body-block-40-row-4"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "BR-010",
+      "kind": "functional",
+      "statement": "Dashboard shall show Open, In Progress, Completed and Overdue counts. Priority: Must.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-009",
+          "locations": [
+            "body-block-42-row-11"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "BR-011",
+      "kind": "functional",
+      "statement": "Team Leads shall view TODOs assigned to their team members. Priority: Must.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-009",
+          "locations": [
+            "body-block-42-row-12"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "BR-012",
+      "kind": "functional",
+      "statement": "System shall maintain created-by, created-date, updated-by and updated-date for each TODO. Priority: Must.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-009",
+          "locations": [
+            "body-block-42-row-13"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "BR-013",
+      "kind": "functional",
+      "statement": "Users shall be able to delete TODOs where permitted. Priority: Should.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-009",
+          "locations": [
+            "body-block-42-row-14"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "BR-014",
+      "kind": "functional",
+      "statement": "System shall prevent unauthorized modification of another user's TODO. Priority: Must.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-009",
+          "locations": [
+            "body-block-42-row-15"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "BR-015",
+      "kind": "non_functional",
+      "statement": "System shall provide a web interface through supported browsers. Priority: Must.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-009",
+          "locations": [
+            "body-block-42-row-16"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "functional",
+      "statement": "Create TODO: enter title; enter description; select priority; select due date; optionally assign to a user; save the TODO.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-010",
+          "locations": [
+            "body-block-45",
+            "body-block-46",
+            "body-block-47",
+            "body-block-48",
+            "body-block-49",
+            "body-block-50"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "functional",
+      "statement": "Manage TODO: view details; edit information; change status; change priority or due date; reassign where authorized; delete where authorized.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-011",
+          "locations": [
+            "body-block-52",
+            "body-block-53",
+            "body-block-54",
+            "body-block-55",
+            "body-block-56",
+            "body-block-57"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "functional",
+      "statement": "Dashboard: show total open TODOs, in-progress TODOs, completed TODOs, overdue TODOs, and high/critical priority TODOs.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-012",
+          "locations": [
+            "body-block-59",
+            "body-block-60",
+            "body-block-61",
+            "body-block-62",
+            "body-block-63"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "functional",
+      "statement": "A TODO must have a title.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-013",
+          "locations": [
+            "body-block-65"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "functional",
+      "statement": "A due date cannot be earlier than creation date unless explicitly permitted.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-013",
+          "locations": [
+            "body-block-66"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "functional",
+      "statement": "Completed TODOs must have Completed status.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-013",
+          "locations": [
+            "body-block-67"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "functional",
+      "statement": "Only authorized users can assign or modify TODOs.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-013",
+          "locations": [
+            "body-block-68"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "functional",
+      "statement": "Overdue means due date has passed and status is not Completed.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-013",
+          "locations": [
+            "body-block-69"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "functional",
+      "statement": "Deleting a TODO must not delete the user account or other TODOs.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-013",
+          "locations": [
+            "body-block-70"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "functional",
+      "statement": "User can log in and create a TODO.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-015",
+          "locations": [
+            "body-block-78"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "functional",
+      "statement": "TODO can be assigned, updated and completed.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-015",
+          "locations": [
+            "body-block-79"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "functional",
+      "statement": "Dashboard counts correctly reflect TODO state.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-015",
+          "locations": [
+            "body-block-80"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "functional",
+      "statement": "Users cannot modify TODOs outside their authorization.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-015",
+          "locations": [
+            "body-block-81"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "functional",
+      "statement": "Filtering and search return correct results.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-015",
+          "locations": [
+            "body-block-82"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Application meets agreed NFRs.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-015",
+          "locations": [
+            "body-block-83"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "functional",
+      "statement": "XATA can complete the core TODO lifecycle without administrator assistance.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-015",
+          "locations": [
+            "body-block-84"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "NFR-PERF-001",
+      "kind": "non_functional",
+      "statement": "Normal page/API response time must be ≤ 2 seconds for 95% of requests under normal load.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-003",
+          "locations": [
+            "body-block-7-row-2"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "NFR-PERF-002",
+      "kind": "non_functional",
+      "statement": "TODO create/update operations must complete in ≤ 2 seconds for 95% of requests.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-003",
+          "locations": [
+            "body-block-7-row-3"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "NFR-PERF-003",
+      "kind": "non_functional",
+      "statement": "Dashboard loading must complete in ≤ 3 seconds for 95% of requests.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-003",
+          "locations": [
+            "body-block-7-row-4"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "NFR-PERF-004",
+      "kind": "non_functional",
+      "statement": "Search/filter response must be ≤ 2 seconds for 95% of requests.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-003",
+          "locations": [
+            "body-block-7-row-5"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "NFR-PERF-005",
+      "kind": "non_functional",
+      "statement": "The platform must support at least 500 concurrent active users.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-003",
+          "locations": [
+            "body-block-7-row-6"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "NFR-AVL-001",
+      "kind": "non_functional",
+      "statement": "Monthly availability shall be ≥ 99.5%, excluding agreed maintenance windows.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-004",
+          "locations": [
+            "body-block-9-row-2"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "NFR-AVL-002",
+      "kind": "non_functional",
+      "statement": "Planned maintenance shall be communicated at least 24 hours in advance.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-004",
+          "locations": [
+            "body-block-9-row-3"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "NFR-AVL-003",
+      "kind": "non_functional",
+      "statement": "Service shall be restored within 30 minutes after an application failure.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-004",
+          "locations": [
+            "body-block-9-row-4"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "The solution shall support growth in users and TODO volume without major redesign.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-005",
+          "locations": [
+            "body-block-11"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "The solution shall support at least 100,000 TODO records initially.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-005",
+          "locations": [
+            "body-block-12"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Application services should be horizontally scalable where practical.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-005",
+          "locations": [
+            "body-block-13"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Database design shall support future growth beyond initial capacity.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-005",
+          "locations": [
+            "body-block-14"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "All users shall be authenticated before accessing protected functionality.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-006",
+          "locations": [
+            "body-block-16"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Authorization shall be role-based.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-006",
+          "locations": [
+            "body-block-17"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Users shall only access TODO data permitted by their role.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-006",
+          "locations": [
+            "body-block-18"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Data shall be encrypted in transit using HTTPS/TLS.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-006",
+          "locations": [
+            "body-block-19"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Sensitive credentials shall not be hard-coded.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-006",
+          "locations": [
+            "body-block-20"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "If passwords are locally managed, they shall use secure industry-standard hashing.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-006",
+          "locations": [
+            "body-block-21"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "The application shall protect against common web vulnerabilities, including injection, broken access control and XSS.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-006",
+          "locations": [
+            "body-block-22"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Administrative actions should be auditable.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-006",
+          "locations": [
+            "body-block-23"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "TODO records shall have unique identifiers.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-007",
+          "locations": [
+            "body-block-25"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Required fields shall be validated server-side.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-007",
+          "locations": [
+            "body-block-26"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Updates shall not silently overwrite conflicting data.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-007",
+          "locations": [
+            "body-block-27"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Created and updated timestamps shall be stored consistently.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-007",
+          "locations": [
+            "body-block-28"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Referential integrity shall be maintained between TODOs and users.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-007",
+          "locations": [
+            "body-block-29"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Deleted data handling shall follow XATA's retention policy.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-007",
+          "locations": [
+            "body-block-30"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Core create/update/complete flow should require minimal steps.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-008",
+          "locations": [
+            "body-block-32"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "UI shall be responsive for standard desktop and tablet screens.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-008",
+          "locations": [
+            "body-block-33"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Validation errors shall be understandable.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-008",
+          "locations": [
+            "body-block-34"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Status, priority and overdue items shall be visually distinguishable.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-008",
+          "locations": [
+            "body-block-35"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Common actions shall be discoverable without technical knowledge.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-008",
+          "locations": [
+            "body-block-36"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Target WCAG 2.1 AA principles where practical.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-009",
+          "locations": [
+            "body-block-38"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Keyboard navigation should support core workflows.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-009",
+          "locations": [
+            "body-block-39"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Form controls should have meaningful labels.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-009",
+          "locations": [
+            "body-block-40"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Text should have sufficient contrast and readable sizing.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-009",
+          "locations": [
+            "body-block-41"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Solution shall use modular, maintainable code.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-010",
+          "locations": [
+            "body-block-43"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Business logic shall be separated from presentation and persistence.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-010",
+          "locations": [
+            "body-block-44"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "APIs and major components shall be documented.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-010",
+          "locations": [
+            "body-block-45"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Automated unit tests shall cover critical business logic.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-010",
+          "locations": [
+            "body-block-46"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Configuration shall be externalized from source code.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-010",
+          "locations": [
+            "body-block-47"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Logging shall support troubleshooting without exposing sensitive information.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-010",
+          "locations": [
+            "body-block-48"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Application errors shall be logged with sufficient troubleshooting context.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-011",
+          "locations": [
+            "body-block-50"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Health checks shall be available.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-011",
+          "locations": [
+            "body-block-51"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Key metrics should include request failures and response latency.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-011",
+          "locations": [
+            "body-block-52"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Logs should include correlation/request identifiers where appropriate.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-011",
+          "locations": [
+            "body-block-53"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Operational alerts should be configurable for service failures.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-011",
+          "locations": [
+            "body-block-54"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Production data shall be backed up according to an agreed schedule.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-012",
+          "locations": [
+            "body-block-56"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Backups shall be protected from unauthorized access.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-012",
+          "locations": [
+            "body-block-57"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Solution shall support restoration after major failure.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-012",
+          "locations": [
+            "body-block-58"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Target RPO: 15 minutes unless XATA agrees otherwise.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-012",
+          "locations": [
+            "body-block-59"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Target RTO: 30 minutes.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-012",
+          "locations": [
+            "body-block-60"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Support current versions of major enterprise browsers such as Chrome and Edge.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-013",
+          "locations": [
+            "body-block-62"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Avoid browser-specific functionality unless approved.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-013",
+          "locations": [
+            "body-block-63"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "APIs should use documented, versionable interfaces.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-013",
+          "locations": [
+            "body-block-64"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Collect only data required for TODO management.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-014",
+          "locations": [
+            "body-block-66"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Access to personal/team information shall follow XATA authorization rules.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-014",
+          "locations": [
+            "body-block-67"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Sensitive information shall not be written to application logs.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-014",
+          "locations": [
+            "body-block-68"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Data retention and deletion shall follow XATA policy.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-014",
+          "locations": [
+            "body-block-69"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Critical application/database components shall have documented recovery procedures.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-015",
+          "locations": [
+            "body-block-71"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Recovery procedures shall be tested periodically.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-015",
+          "locations": [
+            "body-block-72"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "XBS shall document dependencies required to restore the service.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-015",
+          "locations": [
+            "body-block-73"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "XBS shall demonstrate compliance with agreed NFRs through appropriate testing, evidence, configuration review and operational validation before production acceptance.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-016",
+          "locations": [
+            "body-block-75"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Security NFR category has priority Must.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-017",
+          "locations": [
+            "body-block-77-row-2"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Performance NFR category has priority Must.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-017",
+          "locations": [
+            "body-block-77-row-3"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Availability NFR category has priority Must.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-017",
+          "locations": [
+            "body-block-77-row-4"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Data Integrity NFR category has priority Must.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-017",
+          "locations": [
+            "body-block-77-row-5"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Backup & Recovery NFR category has priority Must.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-017",
+          "locations": [
+            "body-block-77-row-6"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Usability NFR category has priority Must.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-017",
+          "locations": [
+            "body-block-77-row-7"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Maintainability NFR category has priority Must.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-017",
+          "locations": [
+            "body-block-77-row-8"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Accessibility NFR category has priority Should.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-017",
+          "locations": [
+            "body-block-77-row-9"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": null,
+      "kind": "non_functional",
+      "statement": "Advanced observability NFR category has priority Should.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-017",
+          "locations": [
+            "body-block-77-row-10"
+          ]
+        }
+      ]
+    }
+  ],
+  "open_questions": [
+    {
+      "question": "What does 'quickly' mean for creating and updating TODO items (for example, a target number of steps or time), and how will it be measured?",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-004",
+          "locations": [
+            "body-block-10"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "What is the scope of 'basic' priority and due-date management (for example, priority levels, due-date rules, and overdue definition)?",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-004",
+          "locations": [
+            "body-block-13"
+          ]
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-003",
+          "locations": [
+            "body-block-7"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "What is the definition of a 'team' and how are team members grouped for TODO assignment and team-level TODO management?",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-002",
+          "locations": [
+            "body-block-5"
+          ]
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-004",
+          "locations": [
+            "body-block-12"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "What content and metrics must the 'simple dashboard' include, and what does 'understand team workload' from the background require beyond the dashboard?",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-004",
+          "locations": [
+            "body-block-14"
+          ]
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-003",
+          "locations": [
+            "body-block-7"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "What measurable target defines success for 'reduce dependency on spreadsheets, email and chat', and what is the baseline?",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-004",
+          "locations": [
+            "body-block-15"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "The supplied evidence contains no non-functional requirements (for example security, performance, availability, accessibility, or integration constraints). Are such requirements defined in another source, or are they out of scope for this BRD?",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-002",
+          "locations": [
+            "body-block-5"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "BR-003 refers to TODOs users 'are authorized to manage', but the evidence does not define what authorization applies or which roles hold it.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-008",
+          "locations": [
+            "body-block-42-row-4"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "BR-005 allows assignment to 'another authorized user', but the evidence does not define who is authorized to receive assignments or how authorization is determined.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-008",
+          "locations": [
+            "body-block-42-row-6"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "The in-scope list includes deleting TODOs, but no business requirement or role responsibility states who may delete a TODO or under what conditions.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-005",
+          "locations": [
+            "body-block-19"
+          ]
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-007",
+          "locations": [
+            "body-block-40-row-2"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "The evidence does not define 'overdue' for the Team Lead's monitoring responsibility or what 'team' comprises.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-007",
+          "locations": [
+            "body-block-40-row-3"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "The scope of 'basic platform configuration' for the Administrator role is not defined.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-007",
+          "locations": [
+            "body-block-40-row-4"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "The in-scope list includes optional notes, but BR-002 lists only title, description, status, priority and due date. It is unclear whether notes are a required, optional, or separate field.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-005",
+          "locations": [
+            "body-block-23"
+          ]
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-008",
+          "locations": [
+            "body-block-42-row-3"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "The level of detail required for the dashboard showing TODO status and the basic team view is not defined.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-005",
+          "locations": [
+            "body-block-25",
+            "body-block-26"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "The supplied evidence contains no non-functional requirements (such as performance, security, availability, or accessibility targets), so it is unclear whether none were specified or they were omitted from the BRD extract.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-008",
+          "locations": []
+        }
+      ]
+    },
+    {
+      "question": "Which browsers are 'supported browsers' for BR-015, and which versions are in scope?",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-009",
+          "locations": [
+            "body-block-42-row-16"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "What rules define 'where permitted' for deletion (BR-013) and 'where authorized' for reassignment and deletion (section 7.2)? Authorization roles and criteria are not specified.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-009",
+          "locations": [
+            "body-block-42-row-14"
+          ]
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-011",
+          "locations": [
+            "body-block-56",
+            "body-block-57"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "Section 7.3 lists 'Total open TODOs' and 'High/Critical priority TODOs', which are not in BR-010. Is the dashboard required to show these counts, and how is 'Open' (BR-010) distinguished from 'Total open' (7.3)? Also, how is 'Overdue' defined?",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-009",
+          "locations": [
+            "body-block-42-row-11"
+          ]
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-012",
+          "locations": [
+            "body-block-59",
+            "body-block-60",
+            "body-block-61",
+            "body-block-62",
+            "body-block-63"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "How are a Team Lead's team members defined and maintained for the team-view requirement in BR-011?",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-009",
+          "locations": [
+            "body-block-42-row-12"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "Who is permitted to approve a due date earlier than the creation date, and under what conditions is this 'explicit permission' given?",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-013",
+          "locations": [
+            "body-block-66"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "How are 'authorized users' defined, and what authorization model governs who can assign, modify, or update TODOs?",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-013",
+          "locations": [
+            "body-block-68"
+          ]
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-015",
+          "locations": [
+            "body-block-81"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "What are the 'agreed NFRs'? The NFR evidence is referenced but not included in the supplied evidence, so the non-functional acceptance threshold cannot be determined.",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-015",
+          "locations": [
+            "body-block-83"
+          ]
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-014",
+          "locations": [
+            "body-block-75"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "What fields, criteria, and scope are covered by 'filtering and search', and what defines a 'correct' result?",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-015",
+          "locations": [
+            "body-block-82"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "What counts are required on the dashboard, and how is each count defined in terms of TODO state (for example, how overdue TODOs are counted)?",
+      "sources": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-015",
+          "locations": [
+            "body-block-80"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "NFR-PERF-001 applies only \"under normal load\", but the source does not define normal load (for example, the number of concurrent users or request volume). What load profile should the response-time target be measured against?",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-003",
+          "locations": [
+            "body-block-7-row-2"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "NFR-PERF-005 requires at least 500 concurrent active users but does not state whether the performance targets in NFR-PERF-001 to NFR-PERF-004 must be met at that concurrency level. Is the 500-user requirement expected to be tested against those response-time targets?",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-003",
+          "locations": [
+            "body-block-7-row-6",
+            "body-block-7-row-2"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "The 95% response-time targets (NFR-PERF-001 to NFR-PERF-004) do not specify the measurement window or sampling method (for example, per day, per hour, or per test run). How should compliance with the 95% threshold be measured?",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-003",
+          "locations": [
+            "body-block-7-row-2",
+            "body-block-7-row-3",
+            "body-block-7-row-4",
+            "body-block-7-row-5"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "Which maintenance windows are agreed and excluded from the 99.5% monthly availability target, and how is availability measured?",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-004",
+          "locations": [
+            "body-block-9-row-2"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "Who must receive the 24-hour advance communication of planned maintenance, and through which channel?",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-004",
+          "locations": [
+            "body-block-9-row-3"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "When does the 30-minute service restoration clock start and stop, and what constitutes restored service?",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-004",
+          "locations": [
+            "body-block-9-row-4"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "What time horizon or volume target applies to 'initially' in the 100,000 TODO record requirement, and what defines 'without major redesign'?",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-005",
+          "locations": [
+            "body-block-11",
+            "body-block-12"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "Where horizontal scalability is required 'where practical,' what criteria determine when it is not practical?",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-005",
+          "locations": [
+            "body-block-13"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "Is the locally managed password requirement applicable, given that the source does not state whether passwords are locally managed?",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-006",
+          "locations": [
+            "body-block-21"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "Which administrative actions must be auditable, and what is the required audit retention? The 'should' obligation strength is not resolved.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-006",
+          "locations": [
+            "body-block-23"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "What is XATA's retention policy referenced for deleted data, and where is it defined?",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-007",
+          "locations": [
+            "body-block-30"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "The scope of 'where practical' for WCAG 2.1 AA conformance is undefined. Which success criteria or conformance level must be met, and which exceptions apply?",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-009",
+          "locations": [
+            "body-block-38"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "'Standard desktop and tablet screens' and 'minimal steps' are not quantified. What screen sizes, resolutions, and maximum step counts are expected?",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-008",
+          "locations": [
+            "body-block-32",
+            "body-block-33"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "'Critical business logic' for automated unit test coverage is not defined. Which modules or rules are in scope, and is a coverage threshold required?",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-010",
+          "locations": [
+            "body-block-46"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "The set of 'key metrics' beyond request failures and response latency is not specified, and no alert thresholds are given for 'service failures'. Which metrics and thresholds are required?",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-011",
+          "locations": [
+            "body-block-52",
+            "body-block-54"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "No BRD evidence was supplied, and the NFR evidence contains no requirement IDs or functional requirements. Are there BRD functional requirements and IDs that must be included in this inventory?",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-008",
+          "locations": []
+        }
+      ]
+    },
+    {
+      "question": "Who agrees the backup schedule, and what is its frequency and retention period? The source says only 'an agreed schedule'.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-012",
+          "locations": [
+            "body-block-56"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "What constitutes a 'major failure', and what is the restoration time or success criterion after one? The source does not define either.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-012",
+          "locations": [
+            "body-block-58"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "Who may agree to a different RPO, and what is the process for that agreement? The source says only 'unless XATA agrees otherwise'.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-012",
+          "locations": [
+            "body-block-59"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "Which browsers and versions are in scope beyond Chrome and Edge? 'Major enterprise browsers' and 'current versions' are not defined.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-013",
+          "locations": [
+            "body-block-62"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "Who approves browser-specific functionality, and what approval criteria apply?",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-013",
+          "locations": [
+            "body-block-63"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "Which XATA authorization rules and XATA data retention/deletion policies apply? They are referenced but not supplied in the evidence.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-014",
+          "locations": [
+            "body-block-67",
+            "body-block-69"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "How often must recovery procedures be tested? 'Periodically' is not quantified.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-015",
+          "locations": [
+            "body-block-72"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "What does 'XBS' refer to, and what is the scope of the dependency documentation required to restore the service?",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-015",
+          "locations": [
+            "body-block-73"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "The supplied evidence does not contain the agreed NFR statements, measurable thresholds, units, or time periods for the priority categories; what are the specific agreed NFRs and their acceptance criteria?",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-016",
+          "locations": [
+            "body-block-75"
+          ]
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-017",
+          "locations": [
+            "body-block-77-row-2",
+            "body-block-77-row-3",
+            "body-block-77-row-4",
+            "body-block-77-row-5",
+            "body-block-77-row-6",
+            "body-block-77-row-7",
+            "body-block-77-row-8",
+            "body-block-77-row-9",
+            "body-block-77-row-10"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "The priority table uses Must and Should without defining how Should-priority categories (Accessibility, Advanced observability) differ in acceptance obligation from Must-priority categories; is a Should item required for production acceptance?",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-016",
+          "locations": [
+            "body-block-75"
+          ]
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-017",
+          "locations": [
+            "body-block-77-row-9",
+            "body-block-77-row-10"
+          ]
+        }
+      ]
+    }
+  ]
+}
