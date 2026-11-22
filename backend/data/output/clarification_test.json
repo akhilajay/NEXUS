@@ -1,0 +1,31 @@
+{
+  "inventory": "data\\output\\requirements_inventory_integrated.json",
+  "sources": [
+    "XATA_TODO_BRD.docx",
+    "XATA_TODO_NFR.docx"
+  ],
+  "questions_checked": 1,
+  "answered_count": 1,
+  "unresolved_count": 0,
+  "results": [
+    {
+      "question": "How is 'overdue' defined, and is it determined solely by the due date being in the past relative to an open (not completed) TODO item?",
+      "question_id": 1,
+      "status": "answered",
+      "answer": "Per the BRD business rules, 'overdue' means the due date has passed and the status is not Completed. Under the BRD's status model (Open, In Progress, Completed), this makes an Open or In Progress TODO overdue once its due date has passed. The rule lists only these two conditions. Note that the chunk IDs cited in the question (XATA_TODO_BRD.docx-004 and -003) do not contain this rule. The rule is in XATA_TODO_BRD.docx-013.",
+      "remaining_question": null,
+      "evidence": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-013",
+          "quote": "Overdue means due date has passed and status is not Completed."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-009",
+          "quote": "Dashboard shall show Open, In Progress, Completed and Overdue counts."
+        }
+      ]
+    }
+  ]
+}

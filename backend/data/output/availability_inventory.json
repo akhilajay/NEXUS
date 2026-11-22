@@ -1,0 +1,73 @@
+{
+  "requirements": [
+    {
+      "requirement_id": "NFR-AVL-001",
+      "kind": "non_functional",
+      "statement": "Monthly availability must be ≥ 99.5%, excluding agreed maintenance windows.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-004",
+          "locations": [
+            "body-block-9-row-2"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "NFR-AVL-002",
+      "kind": "non_functional",
+      "statement": "Planned maintenance must be communicated ≥24 hours in advance.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-004",
+          "locations": [
+            "body-block-9-row-3"
+          ]
+        }
+      ]
+    },
+    {
+      "requirement_id": "NFR-AVL-003",
+      "kind": "non_functional",
+      "statement": "After an application failure, service must be restored within 30 minutes.",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-004",
+          "locations": [
+            "body-block-9-row-4"
+          ]
+        }
+      ]
+    }
+  ],
+  "open_questions": [
+    {
+      "question": "Which maintenance windows are 'agreed' and excluded from the NFR-AVL-001 availability calculation, and who agrees them?",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-004",
+          "locations": [
+            "body-block-9-row-2"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "How is 'monthly availability' measured (calculation method and measurement point), and at what point does the 30-minute restoration clock in NFR-AVL-003 start and stop?",
+      "sources": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-004",
+          "locations": [
+            "body-block-9-row-2",
+            "body-block-9-row-4"
+          ]
+        }
+      ]
+    }
+  ]
+}

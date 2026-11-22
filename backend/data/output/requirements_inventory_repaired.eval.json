@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "evaluations_run": 2,
+  "repair_round_limit": 1,
+  "repair_rounds_used": 1,
+  "repair_calls_attempted": 1,
+  "initial_evaluation": {
+    "passed": false,
+    "expected_id_count": 23,
+    "matched_id_count": 22,
+    "unnumbered_record_count": 105,
+    "missing_ids": [
+      "BR-004"
+    ],
+    "unexpected_ids": [],
+    "repeated_ids": {},
+    "source_chunks_for_missing_ids": {
+      "BR-004": [
+        "XATA_TODO_BRD.docx-008"
+      ]
+    }
+  },
+  "final_evaluation": {
+    "passed": true,
+    "expected_id_count": 23,
+    "matched_id_count": 23,
+    "unnumbered_record_count": 105,
+    "missing_ids": [],
+    "unexpected_ids": [],
+    "repeated_ids": {},
+    "source_chunks_for_missing_ids": {}
+  },
+  "repair_results": [
+    {
+      "requirement_id": "BR-004",
+      "outcome": "recovered"
+    }
+  ],
+  "inventory_path": "data\\output\\requirements_inventory_repaired.json"
+}
