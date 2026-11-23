@@ -1,0 +1,13 @@
+{
+  "status": "processing_error",
+  "sources": [
+    "XATA_TODO_BRD.docx",
+    "XATA_TODO_NFR.docx"
+  ],
+  "artifacts": {
+    "evaluation": "C:\\Users\\prave\\AI_WokrSpace\\NEXUS\\backend\\data\\output\\workflow-full-v1\\ba\\ba-q07xx83v\\requirements_inventory.eval.json",
+    "inventory": "C:\\Users\\prave\\AI_WokrSpace\\NEXUS\\backend\\data\\output\\workflow-full-v1\\ba\\ba-q07xx83v\\requirements_inventory.json"
+  },
+  "stage": "clarification",
+  "error": "Clarification did not finish successfully (exit 2)."
+}

@@ -1,0 +1,1196 @@
+{
+  "inventory": "C:\\Users\\prave\\AI_WokrSpace\\NEXUS\\backend\\data\\output\\workflow-full-v2\\ba\\ba-29xmk3ci\\requirements_inventory.json",
+  "sources": [
+    "XATA_TODO_BRD.docx",
+    "XATA_TODO_NFR.docx"
+  ],
+  "questions_selected": 52,
+  "questions_checked": 52,
+  "answered_count": 4,
+  "unresolved_count": 48,
+  "processing_error_count": 0,
+  "results": [
+    {
+      "question": "What response time or effort threshold does 'quickly create and update TODOs' imply? The term is not measurable as written.",
+      "question_id": 1,
+      "status": "partially_answered",
+      "answer": "The response-time part is answered by NFR-PERF-002, which sets a target of 2 seconds for 95% of TODO create/update requests. No measurable effort threshold is defined; the NFR only asks that the core flow 'require minimal steps'.",
+      "remaining_question": "What measurable effort target (for example, maximum number of steps or clicks to create or update a TODO) should replace 'minimal steps'?",
+      "proposed_assumption": "Treat 'quickly' as the NFR-PERF-002 target of 2 seconds for 95% of create/update requests until XATA sets a step-count target.",
+      "assumption_rationale": "This gives the term a testable time threshold now, while the effort dimension is still pending XATA input.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-003",
+          "quote": "TODO create/update operation | ≤ 2 seconds for 95% of requests"
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-008",
+          "quote": "Core create/update/complete flow should require minimal steps."
+        }
+      ]
+    },
+    {
+      "question": "How is 'overdue' defined, and which priority levels are included in 'basic priority' management?",
+      "question_id": 2,
+      "status": "answered",
+      "answer": "Overdue means a TODO whose due date has passed and whose status is not Completed. The basic priority levels are Low, Medium, High and Critical.",
+      "remaining_question": null,
+      "proposed_assumption": null,
+      "assumption_rationale": null,
+      "evidence": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-013",
+          "quote": "Overdue means due date has passed and status is not Completed."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-008",
+          "quote": "System shall support Low, Medium, High and Critical priorities."
+        }
+      ]
+    },
+    {
+      "question": "Who may assign TODOs to whom, and how are 'team' and 'team members' defined (for example, membership, scope, or permissions)?",
+      "question_id": 3,
+      "status": "partially_answered",
+      "answer": "The BRD gives the Team Lead role the ability to 'Create/assign TODOs' and requires that users can assign a TODO to 'another authorized user'. Team membership and assignment scope are not defined; XATA is to provide the team structure.",
+      "remaining_question": "Who counts as 'authorized' to assign TODOs, and what defines a team and its members (membership source, scope, and whether Employees can assign to peers or only Team Leads can)?",
+      "proposed_assumption": "Team Leads may assign TODOs to members of the team structure XATA provides, and Employees may assign only to themselves.",
+      "assumption_rationale": "This maps the stated roles to a concrete assignment scope while XATA supplies the team structure and the authorization rules.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-007",
+          "quote": "Create/assign TODOs; view team TODOs; monitor overdue work."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-013",
+          "quote": "Only authorized users can assign or modify TODOs."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-014",
+          "quote": "XATA will provide the user list and team structure."
+        }
+      ]
+    },
+    {
+      "question": "What content, metrics, and views must the 'simple dashboard for work tracking' include?",
+      "question_id": 4,
+      "status": "partially_answered",
+      "answer": "The dashboard must show Open, In Progress, Completed and Overdue counts, and must also show total open, in-progress, completed, overdue and High/Critical priority TODOs. A basic team view for assigned TODOs is in scope, and the dashboard must load within 3 seconds for 95% of requests.",
+      "remaining_question": "Which views and layouts are required, and does 'Total open' differ from the 'Open' status count?",
+      "proposed_assumption": "The dashboard shows the four BR-010 counts plus the High/Critical count, scoped to the user's own TODOs, with Team Leads also seeing a team view.",
+      "assumption_rationale": "This combines the listed metrics with the stated role scope so the dashboard can be designed before XATA confirms layout details.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-009",
+          "quote": "Dashboard shall show Open, In Progress, Completed and Overdue counts."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-012",
+          "quote": "Total open TODOs."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-005",
+          "quote": "Basic team view for assigned TODOs."
+        }
+      ]
+    },
+    {
+      "question": "What defines 'simple' and 'intentionally small' for the first release, and which capabilities are explicitly out of scope?",
+      "question_id": 5,
+      "status": "partially_answered",
+      "answer": "The BRD defines the first-release boundary through explicit In Scope and Out of Scope lists, but it does not define 'simple' or 'intentionally small' with measurable criteria. Out of scope items include advanced project management, Gantt charts, time tracking, chat or collaboration features, file management, AI-generated TODOs, native mobile apps, complex workflow approvals and external customer access.",
+      "remaining_question": "Does XATA accept the In Scope list as the complete first-release capability set, and are any measurable criteria needed to define 'simple' or 'intentionally small'?",
+      "proposed_assumption": "Treat the BRD's In Scope list as the complete first-release capability set, with everything not listed treated as out of scope.",
+      "assumption_rationale": "This gives the team a workable scope boundary for design and estimation until XATA confirms the scope and any measurable simplicity criteria.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-003",
+          "quote": "keeping the first release intentionally small and easy to use"
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-005",
+          "quote": "Basic team view for assigned TODOs."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-006",
+          "quote": "Chat or collaboration features."
+        }
+      ]
+    },
+    {
+      "question": "The objective to 'reduce dependency on spreadsheets, email and chat' has no measurable target or baseline. Is it a success measure or a requirement, and if measurable, what is the target?",
+      "question_id": 6,
+      "status": "partially_answered",
+      "answer": "The objective is listed under Business Objectives, not under the numbered Business Requirements (BR-001 to BR-015), so it is an objective rather than a testable requirement. The BRD gives no baseline or measurable target for it.",
+      "remaining_question": "What measurable target and baseline should XATA set for reducing dependency on spreadsheets, email and chat, and should it be tracked as a success measure?",
+      "proposed_assumption": "Treat this objective as a qualitative success measure with no numeric target until XATA supplies a baseline.",
+      "assumption_rationale": "This keeps the objective in the success criteria without inventing a target that XATA has not agreed.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-004",
+          "quote": "Reduce dependency on spreadsheets, email and chat for TODO tracking."
+        }
+      ]
+    },
+    {
+      "question": "The supplied evidence contains no NFR content (for example performance, security, availability, accessibility, or supported platforms). Are NFR sources available that should be included?",
+      "question_id": 7,
+      "status": "answered",
+      "answer": "NFR content is available: the supplied XATA_TODO_NFR.docx covers performance, availability, scalability, security, data integrity, usability, accessibility, maintainability, observability, backup and recovery, compatibility, privacy and disaster recovery. The BRD also states that XBS will propose the architecture based on the BRD and NFR, so the NFR document should be included.",
+      "remaining_question": null,
+      "proposed_assumption": null,
+      "assumption_rationale": null,
+      "evidence": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-003",
+          "quote": "NFR-PERF-001 | Normal page/API response time"
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-006",
+          "quote": "Authorization shall be role-based."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-014",
+          "quote": "XBS will propose the technical architecture based on the BRD and NFR."
+        }
+      ]
+    },
+    {
+      "question": "What defines a user as 'authorized to manage' or an 'authorized user' for editing (BR-003) and assignment (BR-005)? No authorization rules or role mapping are specified.",
+      "question_id": 8,
+      "status": "partially_answered",
+      "answer": "Authorization must be role-based (NFR), and the BRD defines three roles. Employees create and manage their own TODOs, Team Leads create and assign TODOs and view team TODOs, and Administrators manage users and platform configuration. The BRD does not map these roles to specific edit or assign permissions for 'authorized to manage'.",
+      "remaining_question": "Which roles, and under what ownership or team conditions, may edit or assign another user's TODO, and what does 'authorized to manage' mean?",
+      "proposed_assumption": "Employees may edit only TODOs they own or are assigned, Team Leads may edit and assign TODOs for their team members, and Administrators may manage users and configuration without editing individual TODOs unless XATA says otherwise.",
+      "assumption_rationale": "This maps the stated role responsibilities to the edit and assign rules so design can proceed, and XATA can confirm or correct the mapping.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-007",
+          "quote": "Create/assign TODOs; view team TODOs; monitor overdue work."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-013",
+          "quote": "Only authorized users can assign or modify TODOs."
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-006",
+          "quote": "Authorization shall be role-based."
+        }
+      ]
+    },
+    {
+      "question": "What defines a 'team' for the Team Lead team view and the basic team view for assigned TODOs? Team membership and structure are not described.",
+      "question_id": 9,
+      "status": "needs_human_review",
+      "answer": null,
+      "remaining_question": "Which users make up a team, and how is team membership assigned and maintained (for example, by manager reporting line, a team roster, or a user attribute)? The documents say XATA will provide the team structure but do not define it.",
+      "proposed_assumption": "A team is the set of users who report to a given Team Lead, as listed in the team structure XATA provides.",
+      "assumption_rationale": "This gives the Team Lead view a concrete membership rule to build against until XATA confirms the actual team structure.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-009",
+          "quote": "Team Leads shall view TODOs assigned to their team members."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-007",
+          "quote": "view team TODOs; monitor overdue work"
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-014",
+          "quote": "XATA will provide the user list and team structure."
+        }
+      ]
+    },
+    {
+      "question": "How is 'overdue' determined and how is monitoring of overdue work expected to be performed (e.g., views, alerts)? No overdue criteria or monitoring mechanism is specified.",
+      "question_id": 10,
+      "status": "partially_answered",
+      "answer": "Overdue is defined as a TODO whose due date has passed and whose status is not Completed. The dashboard must show an Overdue count, and Team Leads are expected to monitor overdue work.",
+      "remaining_question": "What monitoring mechanism is expected for overdue work beyond the dashboard count, such as a dedicated overdue view, filter, or alerts/notifications, and who sees it?",
+      "proposed_assumption": "Overdue work is monitored through the dashboard Overdue count and a filter on due date and status, with no automated alerts in the first release.",
+      "assumption_rationale": "This uses the existing dashboard and filter requirements to give a workable monitoring approach while the alerting need is unconfirmed.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-013",
+          "quote": "Overdue means due date has passed and status is not Completed."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-009",
+          "quote": "Dashboard shall show Open, In Progress, Completed and Overdue counts."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-007",
+          "quote": "monitor overdue work"
+        }
+      ]
+    },
+    {
+      "question": "What is included in the 'basic user profile' and in 'basic platform configuration' administered by the Administrator? Neither scope is defined.",
+      "question_id": 11,
+      "status": "needs_human_review",
+      "answer": null,
+      "remaining_question": "What data fields make up the basic user profile, and which configurable settings are included in basic platform configuration that the Administrator manages?",
+      "proposed_assumption": "The basic user profile contains only the identity, role, and team attributes needed for login, assignment, and authorization, and basic platform configuration covers only user and role administration.",
+      "assumption_rationale": "Limiting both scopes to what login, assignment and authorization need matches the privacy rule and gives the team a minimal starting point to confirm.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-005",
+          "quote": "User login and basic user profile."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-007",
+          "quote": "Manage users and basic platform configuration."
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-014",
+          "quote": "Collect only data required for TODO management."
+        }
+      ]
+    },
+    {
+      "question": "Is the list of audit information fields complete? The source says 'such as created date and updated date', which implies additional fields may be expected but none are named.",
+      "question_id": 12,
+      "status": "partially_answered",
+      "answer": "BR-012 requires the system to maintain created-by, created-date, updated-by and updated-date as Must requirements. The 4.1 wording 'such as' is illustrative and does not add fields beyond these four.",
+      "remaining_question": "Are any further audit fields required, such as audit records for administrative actions, which the NFR says should be auditable?",
+      "proposed_assumption": "The four BR-012 fields are the complete TODO audit set for the first release, with administrative action auditing handled as a separate log.",
+      "assumption_rationale": "BR-012 is the only explicit, prioritized list of audit fields, so treating it as complete gives the design a firm baseline.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-009",
+          "quote": "System shall maintain created-by, created-date, updated-by and updated-date."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-005",
+          "quote": "Audit information such as created date and updated date."
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-006",
+          "quote": "Administrative actions should be auditable."
+        }
+      ]
+    },
+    {
+      "question": "What content and behavior is expected for the dashboard showing TODO status? No metrics, filters, or audience are specified.",
+      "question_id": 13,
+      "status": "partially_answered",
+      "answer": "The BRD specifies the dashboard metrics: counts of Open, In Progress, Completed and Overdue TODOs, plus High/Critical priority TODOs. It does not specify dashboard filters, the target audience, or display and drill-down behavior.",
+      "remaining_question": "What filters, audience, scope (personal, team or all TODOs), and drill-down or refresh behavior should the dashboard have, and should High/Critical priority be shown as a count or a list?",
+      "proposed_assumption": "The dashboard shows the four status counts and the High/Critical count scoped to the signed-in user's own and assigned TODOs, visible to all authenticated users.",
+      "assumption_rationale": "This gives a concrete default for scope and audience that XATA can confirm or change, without inventing filters the BRD does not mention.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-009",
+          "quote": "Dashboard shall show Open, In Progress, Completed and Overdue counts."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-012",
+          "quote": "High/Critical priority TODOs."
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-003",
+          "quote": "Dashboard loading"
+        }
+      ]
+    },
+    {
+      "question": "Is a due date mandatory when creating a TODO? BR-002 lists due date as a TODO attribute but does not state whether it is required or optional, and the format is not specified.",
+      "question_id": 14,
+      "status": "needs_human_review",
+      "answer": null,
+      "remaining_question": "Is due date required when a TODO is created, and what date format should be used? BR-002 says a TODO shall contain a due date, but the business rules say only the title must be present, and the format is not specified.",
+      "proposed_assumption": "Due date is required at creation and is entered as a calendar date (no time component), pending XATA confirmation.",
+      "assumption_rationale": "BR-002 is a Must requirement that includes due date, so requiring it is the closest reading of the BRD, and a date-only format is the simplest default for a due date.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-008",
+          "quote": "A TODO shall contain title, description, status, priority and due date."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-010",
+          "quote": "Select due date."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-013",
+          "quote": "A TODO must have a title."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-013",
+          "quote": "A due date cannot be earlier than creation date unless explicitly permitted."
+        }
+      ]
+    },
+    {
+      "question": "Which status changes may Employees make? The Employee role is said to 'update status', but BR-006 and BR-004 define only Open, In Progress, Completed and marking as completed; the permitted transitions are not defined.",
+      "question_id": 15,
+      "status": "partially_answered",
+      "answer": "The Employee role may 'update status', and the BRD defines three statuses (Open, In Progress, Completed) plus a requirement that users can mark TODOs as completed. The BRD does not define which status transitions Employees may make.",
+      "remaining_question": "Which specific status transitions (for example, Open to In Progress, In Progress back to Open, or reopening a Completed TODO) may Employees perform, and on which TODOs?",
+      "proposed_assumption": "Employees may change status freely among Open, In Progress and Completed, but only on TODOs they own or are assigned to.",
+      "assumption_rationale": "This matches the Employee responsibilities and the authorization rules, and it gives the team a workable default until the transition rules are confirmed.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-007",
+          "quote": "Create/manage own TODOs; view assigned TODOs; update status."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-008",
+          "quote": "System shall support Open, In Progress and Completed statuses."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-008",
+          "quote": "Users shall be able to mark TODOs as completed."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-013",
+          "quote": "Completed TODOs must have Completed status."
+        }
+      ]
+    },
+    {
+      "question": "Is the priority of BR-009 (search, 'Should') consistent with the in-scope list, which includes search without a priority? Confirm whether search is required for initial release.",
+      "question_id": 16,
+      "status": "partially_answered",
+      "answer": "Search is in the initial-release in-scope list, so it is part of the first release. BR-009 is labelled 'Should', which is lower than the 'Must' used for most requirements, so the BRD does not explicitly reconcile the two.",
+      "remaining_question": "Is search (BR-009) mandatory for the initial release despite its 'Should' priority, or can it be deferred?",
+      "proposed_assumption": "Treat search by title or description as required for the initial release because it is listed in scope.",
+      "assumption_rationale": "The in-scope list is the more specific statement of release content, so this avoids silently dropping an in-scope feature.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-005",
+          "quote": "Filter and search TODOs."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-008",
+          "quote": "Users shall search TODOs by title or description. | Should"
+        }
+      ]
+    },
+    {
+      "question": "What criteria define 'where permitted' for deleting TODOs (BR-013)? The roles, ownership rules, and conditions are not specified.",
+      "question_id": 17,
+      "status": "partially_answered",
+      "answer": "BR-013 makes deletion conditional on 'where permitted,' and the BRD sets two boundaries: deletion must not remove the user account or other TODOs, and the NFR requires role-based authorization. The specific roles or ownership conditions that make deletion permitted are not defined.",
+      "remaining_question": "Which roles or ownership conditions (for example, creator only, Team Lead, or Administrator) permit deleting a TODO?",
+      "proposed_assumption": "Only the TODO's creator and Administrators may delete a TODO.",
+      "assumption_rationale": "A creator-plus-Administrator rule is a common default that matches the Employee and Administrator roles, giving the reviewer a concrete option to accept or reject.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-009",
+          "quote": "Users shall be able to delete TODOs where permitted."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-013",
+          "quote": "Deleting a TODO must not delete the user account or other TODOs."
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-006",
+          "quote": "Authorization shall be role-based."
+        }
+      ]
+    },
+    {
+      "question": "What criteria define 'where authorized' for reassigning and deleting TODOs (section 7.2)? Authorization rules are not specified.",
+      "question_id": 18,
+      "status": "partially_answered",
+      "answer": "BR-003 allows edits to TODOs a user owns or is authorized to manage, and the BRD states that only authorized users can assign or modify TODOs. The Team Lead role is described as able to create and assign TODOs. The criteria for 'authorized' are not defined for reassignment or deletion.",
+      "remaining_question": "What criteria define 'authorized' for reassigning and deleting TODOs, including whether a TODO's owner, assignee or Team Lead may reassign or delete it?",
+      "proposed_assumption": "The TODO owner and the user's Team Lead may reassign TODOs, and only the owner may delete them.",
+      "assumption_rationale": "Splitting reassignment and deletion rights this way follows the existing Employee and Team Lead role descriptions and gives the reviewer a specific rule to confirm.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-011",
+          "quote": "Reassign where authorized."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-013",
+          "quote": "Only authorized users can assign or modify TODOs."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-008",
+          "quote": "Users shall be able to edit TODOs they own or are authorized to manage."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-007",
+          "quote": "Create/assign TODOs; view team TODOs; monitor overdue work."
+        }
+      ]
+    },
+    {
+      "question": "Which browsers are 'supported' for the web interface (BR-015)? No browser list or versions are given.",
+      "question_id": 19,
+      "status": "partially_answered",
+      "answer": "The NFR requires support for current versions of major enterprise browsers, naming Chrome and Edge as examples. It does not provide a closed list of supported browsers or specific version numbers.",
+      "remaining_question": "Is the supported browser list limited to current Chrome and Edge, or does it include other browsers, and which versions are required?",
+      "proposed_assumption": "For the first release, supported browsers are the current stable versions of Chrome and Edge.",
+      "assumption_rationale": "Limiting support to the two named browsers gives the delivery team a testable baseline until XATA confirms the complete list.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-013",
+          "quote": "Support current versions of major enterprise browsers such as Chrome and Edge."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-009",
+          "quote": "System shall provide a web interface through supported browsers."
+        }
+      ]
+    },
+    {
+      "question": "What are the allowed priority values (for example, whether Critical and High are distinct from other levels), and how is 'Overdue' determined from the due date?",
+      "question_id": 20,
+      "status": "answered",
+      "answer": "The allowed priority values are Low, Medium, High and Critical, so High and Critical are distinct levels. 'Overdue' means the due date has passed and the status is not Completed.",
+      "remaining_question": null,
+      "proposed_assumption": null,
+      "assumption_rationale": null,
+      "evidence": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-008",
+          "quote": "System shall support Low, Medium, High and Critical priorities."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-013",
+          "quote": "Overdue means due date has passed and status is not Completed."
+        }
+      ]
+    },
+    {
+      "question": "Who is authorized to permit a due date earlier than the creation date, and under what conditions is that exception granted?",
+      "question_id": 21,
+      "status": "needs_human_review",
+      "answer": null,
+      "remaining_question": "Which role or person may approve a due date earlier than the creation date, and what conditions must be met? The BRD only states the exception exists.",
+      "proposed_assumption": "Only an Administrator or the Team Lead of the TODO's assignee may approve an earlier due date, and the approval is recorded in the audit fields.",
+      "assumption_rationale": "This gives the reviewer a concrete candidate approver and audit trail to confirm, using roles and audit requirements already in the BRD and NFR.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-013",
+          "quote": "A due date cannot be earlier than creation date unless explicitly permitted."
+        }
+      ]
+    },
+    {
+      "question": "What roles and permissions define 'authorized users' for assigning and modifying TODOs?",
+      "question_id": 22,
+      "status": "partially_answered",
+      "answer": "The BRD defines three roles: Employee, Team Lead and Administrator. Only Team Leads are described as able to create and assign TODOs, and the BRD says only authorized users can assign or modify TODOs. The exact authorization boundary for each role is not defined.",
+      "remaining_question": "What exact rules determine whether a user is authorized to assign or modify a given TODO, including whether an Employee can assign TODOs and whether a Team Lead can modify TODOs outside their team?",
+      "proposed_assumption": "An Employee may modify only TODOs they own or are assigned to, a Team Lead may assign and modify TODOs for their team members, and an Administrator may manage all TODOs.",
+      "assumption_rationale": "This maps the stated role responsibilities to the ownership and team-scope requirements, giving the reviewer a concrete draft matrix to confirm.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-007",
+          "quote": "Create/assign TODOs; view team TODOs; monitor overdue work."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-013",
+          "quote": "Only authorized users can assign or modify TODOs."
+        }
+      ]
+    },
+    {
+      "question": "Which NFRs are the 'agreed NFRs' referenced in the acceptance criteria, and where are they documented? No NFR content is included in the supplied evidence.",
+      "question_id": 23,
+      "status": "partially_answered",
+      "answer": "The NFR document supplied is XATA_TODO_NFR.docx (Version 1.0), which lists the non-functional requirements by category. The NFR acceptance section refers to 'agreed NFRs' but does not state that this document is the agreed baseline.",
+      "remaining_question": "Is XATA_TODO_NFR.docx Version 1.0 the agreed NFR baseline, and has any target been changed or agreed separately?",
+      "proposed_assumption": "XATA_TODO_NFR.docx Version 1.0 is treated as the agreed NFR baseline until XATA confirms otherwise.",
+      "assumption_rationale": "The NFR document is the only NFR source supplied and its version label gives a clear reference point for the reviewer to confirm.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-001",
+          "quote": "Version 1.0"
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-016",
+          "quote": "XBS shall demonstrate compliance with agreed NFRs"
+        }
+      ]
+    },
+    {
+      "question": "Beyond 'Completed', which TODO status values exist, and what transitions between them are permitted?",
+      "question_id": 24,
+      "status": "partially_answered",
+      "answer": "The BRD requires three statuses: Open, In Progress and Completed. Overdue is a derived condition (due date passed and status not Completed), not a separate status value.",
+      "remaining_question": "Which status transitions are permitted, for example whether a Completed TODO can be reopened to Open or In Progress, and who may trigger each transition?",
+      "proposed_assumption": "Status moves forward from Open to In Progress to Completed, and a Completed TODO may be reopened to In Progress by its owner or Team Lead.",
+      "assumption_rationale": "This gives a simple default lifecycle that matches the three statuses and the completion rule, which the reviewer can accept or change.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-008",
+          "quote": "System shall support Open, In Progress and Completed statuses."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-013",
+          "quote": "Completed TODOs must have Completed status."
+        }
+      ]
+    },
+    {
+      "question": "NFR-PERF-001 refers to 'normal load' without defining it. What user volume, request rate, or operating conditions constitute normal load for the response-time target?",
+      "question_id": 25,
+      "status": "needs_human_review",
+      "answer": null,
+      "remaining_question": "What user volume, request rate, or operating conditions does XATA define as 'normal load' for the NFR-PERF-001 response-time target?",
+      "proposed_assumption": "Treat normal load as up to 500 concurrent active users, the NFR-PERF-005 figure, in the single enterprise environment.",
+      "assumption_rationale": "It gives the team a testable load baseline drawn from the NFR itself until XATA confirms the definition.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-003",
+          "quote": "under normal load"
+        }
+      ]
+    },
+    {
+      "question": "NFR-PERF-005 requires 'at least 500' concurrent active users but does not define 'active' or the measurement window. Must the 500 users be supported at peak, sustained, or at a specific response-time target, and what counts as an active user?",
+      "question_id": 26,
+      "status": "needs_human_review",
+      "answer": null,
+      "remaining_question": "What counts as an 'active' user, over what measurement window, and must the 500 users be supported at peak, sustained load, or at a specific response-time target?",
+      "proposed_assumption": "Treat an active user as an authenticated user who makes at least one request within a 5-minute window, with the 500 users supported at sustained load while meeting the NFR-PERF-001 to NFR-PERF-004 targets.",
+      "assumption_rationale": "A defined session-based activity rule and a sustained-load condition make the concurrency target measurable for test design.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-003",
+          "quote": "At least 500"
+        }
+      ]
+    },
+    {
+      "question": "The NFR-PERF-001 to NFR-PERF-004 targets state '95% of requests' without specifying the measurement period or the load conditions under which the percentile is measured. Over what period and under what load should compliance be measured?",
+      "question_id": 27,
+      "status": "needs_human_review",
+      "answer": null,
+      "remaining_question": "Over what measurement period and under what load conditions should the '95% of requests' percentile targets in NFR-PERF-001 to NFR-PERF-004 be measured?",
+      "proposed_assumption": "Measure the 95th percentile over a calendar month under the normal-load definition resolved for NFR-PERF-001.",
+      "assumption_rationale": "A monthly window aligns with the monthly availability measure in NFR-AVL-001 and gives a single consistent compliance period.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-003",
+          "quote": "95% of requests"
+        }
+      ]
+    },
+    {
+      "question": "Which maintenance windows are 'agreed', who agrees them, and how are they documented? NFR-AVL-001 excludes them from the availability measure without defining them.",
+      "question_id": 28,
+      "status": "needs_human_review",
+      "answer": null,
+      "remaining_question": "Which maintenance windows are agreed, who agrees them, and how are they documented so they can be excluded from the NFR-AVL-001 availability measure?",
+      "proposed_assumption": "Treat agreed maintenance windows as those approved in writing by XATA IT and recorded in the operations runbook.",
+      "assumption_rationale": "XATA IT is named as the technical and operational stakeholder, so it is a reasonable approver and the runbook gives an auditable record.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-004",
+          "quote": "excluding agreed maintenance windows"
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-004",
+          "quote": "Communicated ≥24 hours in advance"
+        }
+      ]
+    },
+    {
+      "question": "How is monthly availability measured (calendar month definition, measurement point, and how partial outages are counted)?",
+      "question_id": 29,
+      "status": "partially_answered",
+      "answer": "Monthly availability is targeted at ≥ 99.5%, with agreed maintenance windows excluded. The source does not define the calendar month, the measurement point, or how partial outages are counted.",
+      "remaining_question": "What is the calendar month definition (including time zone), where is availability measured, and how are partial outages counted (for example, by minutes or as full-period downtime)?",
+      "proposed_assumption": "Availability is measured per calendar month in XATA local time at the user-facing entry point, and partial outages are counted pro rata by minutes of unavailability.",
+      "assumption_rationale": "A concrete default lets XBS design monitoring and SLA reporting now, and XATA can confirm or change it during NFR acceptance.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-004",
+          "quote": "≥ 99.5%, excluding agreed maintenance windows"
+        }
+      ]
+    },
+    {
+      "question": "How is 'restored' defined for the 30-minute recovery target in NFR-AVL-003, and is the target measured from failure detection or from failure onset?",
+      "question_id": 30,
+      "status": "needs_human_review",
+      "answer": null,
+      "remaining_question": "How is 'restored' defined (for example, the health check passes, or core user flows work), and does the 30-minute clock start at failure detection or at failure onset?",
+      "proposed_assumption": "'Restored' means the health check passes and core create, view and complete flows succeed, and the 30-minute clock starts at failure detection by monitoring.",
+      "assumption_rationale": "Failure detection is measurable through monitoring alerts, whereas failure onset is usually unknown, so this default makes the target testable.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-004",
+          "quote": "Service restored within 30 minutes"
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-012",
+          "quote": "Target RTO: 30 minutes."
+        }
+      ]
+    },
+    {
+      "question": "What growth targets (users, TODO volume, time horizon) apply beyond the initial 100,000 TODO records, and what counts as 'major redesign'?",
+      "question_id": 31,
+      "status": "needs_human_review",
+      "answer": null,
+      "remaining_question": "What user count, TODO volume and time horizon beyond the initial 100,000 TODO records should be planned for, and what specific change would count as a 'major redesign'?",
+      "proposed_assumption": null,
+      "assumption_rationale": null,
+      "evidence": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-005",
+          "quote": "Support at least 100,000 TODO records initially."
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-005",
+          "quote": "Database design shall support future growth beyond initial capacity."
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-005",
+          "quote": "Support growth in users and TODO volume without major redesign."
+        }
+      ]
+    },
+    {
+      "question": "Under what conditions is horizontal scalability considered 'practical', and is it required or only preferred?",
+      "question_id": 32,
+      "status": "partially_answered",
+      "answer": "Horizontal scalability is a preferred ('should') requirement, not a mandatory one, and applies to application services only.",
+      "remaining_question": "Which specific conditions make horizontal scaling 'practical' (for example, load thresholds, cost limits, or hosting constraints), and what should XBS do if those conditions are not met?",
+      "proposed_assumption": "Horizontal scaling is a design preference that XBS must address in the architecture proposal, with any deviation justified in writing.",
+      "assumption_rationale": "This keeps the preferred status while giving XBS a clear obligation to document its decision without requiring an undefined 'practical' threshold.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-005",
+          "quote": "Application services should be horizontally scalable where practical."
+        }
+      ]
+    },
+    {
+      "question": "Which user roles exist and which TODO data each role may access? The role model is not defined in the supplied evidence.",
+      "question_id": 33,
+      "status": "partially_answered",
+      "answer": "The BRD defines three roles: Employee, Team Lead and Administrator, each with key responsibilities. The NFR requires role-based authorization and says users may access only the TODO data their role permits. No per-role data-access matrix is supplied.",
+      "remaining_question": "What exact TODO data may each role (Employee, Team Lead, Administrator) view, edit, assign or delete, including whether Employees can see TODOs assigned to others and what Administrators may see of TODO content?",
+      "proposed_assumption": "Use the BRD responsibilities list as the working access baseline for Employee, Team Lead and Administrator until XATA agrees a full access matrix.",
+      "assumption_rationale": "It gives the design team a documented starting point for authorization without inventing permissions the evidence does not state.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-007",
+          "quote": "Create/manage own TODOs; view assigned TODOs; update status."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-007",
+          "quote": "Create/assign TODOs; view team TODOs; monitor overdue work."
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-006",
+          "quote": "Users shall only access TODO data permitted by their role."
+        }
+      ]
+    },
+    {
+      "question": "Which passwords are 'locally managed' versus externally managed, and what hashing standard is intended?",
+      "question_id": 34,
+      "status": "partially_answered",
+      "answer": "Where passwords are locally managed, the NFR requires secure industry-standard hashing. The evidence does not name a specific algorithm or identify which passwords are locally managed versus externally managed.",
+      "remaining_question": "Which user accounts or credentials are locally managed and which are handled by an external identity provider, and which specific hashing algorithm and parameters XATA requires?",
+      "proposed_assumption": "Assume no passwords are locally managed until XATA confirms its authentication source, so local hashing requirements apply only if that changes.",
+      "assumption_rationale": "It avoids designing a local password store that XATA may not need, while keeping the hashing requirement in place if local passwords are later confirmed.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-006",
+          "quote": "Passwords, if locally managed, shall use secure industry-standard hashing."
+        }
+      ]
+    },
+    {
+      "question": "Which administrative actions must be auditable, and what audit records and retention are required? The 'should' obligation strength is not clarified.",
+      "question_id": 35,
+      "status": "partially_answered",
+      "answer": "The NFR states that administrative actions should be auditable. The BRD requires record-level created-by, created-date, updated-by and updated-date fields for TODOs. The evidence does not list which administrative actions must be audited or specify audit record content or retention.",
+      "remaining_question": "Which specific administrative actions must be audited, what fields each audit record must hold, how long audit records must be retained, and whether the 'should' obligation is to be treated as mandatory.",
+      "proposed_assumption": null,
+      "assumption_rationale": null,
+      "evidence": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-006",
+          "quote": "Administrative actions should be auditable."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-009",
+          "quote": "System shall maintain created-by, created-date, updated-by and updated-date."
+        }
+      ]
+    },
+    {
+      "question": "What is XATA's retention policy referenced for deleted data, and where is it documented? The policy content is not supplied.",
+      "question_id": 36,
+      "status": "needs_human_review",
+      "answer": null,
+      "remaining_question": "XATA must supply or identify its retention policy for deleted TODO and user data, including retention periods, deletion method and the document that holds the policy.",
+      "proposed_assumption": null,
+      "assumption_rationale": null,
+      "evidence": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-007",
+          "quote": "Deleted data handling shall follow XATA's retention policy."
+        }
+      ]
+    },
+    {
+      "question": "Which fields are 'required' for TODO records, and how should conflicting updates be detected and resolved?",
+      "question_id": 37,
+      "status": "partially_answered",
+      "answer": "The BRD lists the TODO content fields (title, description, status, priority, due date), and the business rules make title mandatory. The NFR requires server-side validation of required fields and says updates must not silently overwrite conflicting data, but it does not define a conflict detection or resolution method.",
+      "remaining_question": "Which fields other than title are mandatory for save, and how should conflicting updates be detected and resolved (for example, version checks, timestamp checks, or user merge prompts)?",
+      "proposed_assumption": "Title is the only mandatory field, and concurrent edits are detected with an updated-date or version check that rejects a stale save and asks the user to reload.",
+      "assumption_rationale": "This gives the team a workable baseline for validation and conflict handling while the BRD and NFR leave both points open.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-008",
+          "quote": "A TODO shall contain title, description, status, priority and due date."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-013",
+          "quote": "A TODO must have a title."
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-007",
+          "quote": "Required fields shall be validated server-side."
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-007",
+          "quote": "Updates shall not silently overwrite conflicting data."
+        }
+      ]
+    },
+    {
+      "question": "What scope and success criteria apply to 'where practical' for targeting WCAG 2.1 AA principles, and which specific WCAG success criteria are required?",
+      "question_id": 38,
+      "status": "needs_human_review",
+      "answer": null,
+      "remaining_question": "What parts of the application are in scope for WCAG 2.1 AA, what does 'where practical' mean in measurable terms, and which specific WCAG 2.1 success criteria must be met and verified?",
+      "proposed_assumption": null,
+      "assumption_rationale": null,
+      "evidence": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-009",
+          "quote": "Target WCAG 2.1 AA principles where practical."
+        }
+      ]
+    },
+    {
+      "question": "What is the measurable meaning of 'minimal steps' for the core create/update/complete flow, and what are the defined 'standard desktop and tablet screens' (sizes, resolutions, or devices)? Are mobile phone screens in scope?",
+      "question_id": 39,
+      "status": "partially_answered",
+      "answer": "The NFR requires the UI to be responsive for standard desktop and tablet screens, and the BRD places mobile native applications out of scope. The NFR does not define 'minimal steps' in measurable terms or specify screen sizes, resolutions, or devices.",
+      "remaining_question": "What is the measurable step-count target for create, update and complete, which standard desktop and tablet screen sizes or devices must be supported, and are mobile phone browser layouts in scope?",
+      "proposed_assumption": "Mobile phone browser layouts are out of scope for the first release, and desktop and tablet are tested at common widths of 768 px and 1280 px or wider.",
+      "assumption_rationale": "This gives the testers concrete viewports and a clear boundary while XATA confirms the screen definitions.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-008",
+          "quote": "UI shall be responsive for standard desktop and tablet screens."
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-008",
+          "quote": "Core create/update/complete flow should require minimal steps."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-006",
+          "quote": "Mobile native applications."
+        }
+      ]
+    },
+    {
+      "question": "Which business logic is considered 'critical' for the automated unit test coverage requirement, and is there a minimum coverage target?",
+      "question_id": 40,
+      "status": "needs_human_review",
+      "answer": null,
+      "remaining_question": "Which business logic is classified as critical for unit testing, and what minimum unit test coverage percentage, if any, is required?",
+      "proposed_assumption": "The business rules in BRD section 8 and the create, edit, status, priority, overdue and authorization logic are treated as critical until XATA confirms the list and a numeric coverage target.",
+      "assumption_rationale": "This gives developers a concrete starting scope for unit tests without inventing a coverage percentage the documents do not state.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-010",
+          "quote": "Automated unit tests shall cover critical business logic."
+        }
+      ]
+    },
+    {
+      "question": "In which cases are correlation/request identifiers considered 'appropriate' for logs, and what is the expected handling of sensitive information in logs?",
+      "question_id": 41,
+      "status": "partially_answered",
+      "answer": "Sensitive information must not be written to application logs, and logging should support troubleshooting without exposing it. Correlation/request identifiers should be included in logs where appropriate, but the documents do not define when that applies.",
+      "remaining_question": "In which specific log events or cases are correlation/request identifiers required, and what counts as sensitive information for logging purposes?",
+      "proposed_assumption": "Include a correlation/request identifier in all application error logs and in request-scoped logs, and treat credentials, passwords, tokens and personal data as sensitive.",
+      "assumption_rationale": "This gives the reviewer a concrete default for the undefined 'where appropriate' condition and the sensitive-data scope, which can be confirmed with XATA.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-011",
+          "quote": "Logs should include correlation/request identifiers where appropriate."
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-014",
+          "quote": "Sensitive information shall not be written to application logs."
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-010",
+          "quote": "Logging shall support troubleshooting without exposing sensitive information."
+        }
+      ]
+    },
+    {
+      "question": "What is the agreed backup schedule for production data, and who agrees it?",
+      "question_id": 42,
+      "status": "needs_human_review",
+      "answer": null,
+      "remaining_question": "What is the production data backup schedule (frequency and retention), and which party (XATA or XBS) must agree to it?",
+      "proposed_assumption": "XBS proposes the production backup schedule and XATA approves it before production acceptance.",
+      "assumption_rationale": "The BRD states that technical design decisions are proposed by XBS and agreed with XATA, so this follows the stated operating model.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-012",
+          "quote": "Production data shall be backed up according to an agreed schedule."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-017",
+          "quote": "Detailed technical design and implementation decisions are to be proposed by XBS and agreed with XATA."
+        }
+      ]
+    },
+    {
+      "question": "How will XATA agree to a different RPO than 15 minutes, and what process or approval applies?",
+      "question_id": 43,
+      "status": "needs_human_review",
+      "answer": null,
+      "remaining_question": "What process, approver and documentation are required for XATA to agree to an RPO other than 15 minutes?",
+      "proposed_assumption": "A non-default RPO is approved by XATA's designated business owner in writing and recorded in the NFR acceptance evidence.",
+      "assumption_rationale": "The NFR allows an alternative RPO only if XATA agrees but names no approver or method, so a written sign-off gives a traceable default.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-012",
+          "quote": "Target RPO: 15 minutes unless XATA agrees otherwise."
+        }
+      ]
+    },
+    {
+      "question": "Is the 15-minute RPO and 30-minute RTO a hard requirement or a target, and what scope (which data, components, or service) do they apply to?",
+      "question_id": 44,
+      "status": "partially_answered",
+      "answer": "The 15-minute RPO and 30-minute RTO are stated as targets, not hard requirements, and the RPO can be changed if XATA agrees. The documents do not state which data, components or service they apply to.",
+      "remaining_question": "Which data, components or service do the 15-minute RPO and 30-minute RTO apply to, and are they binding for production acceptance?",
+      "proposed_assumption": "The RPO and RTO apply to the production TODO application database and its backups, and are treated as acceptance targets verified during NFR acceptance.",
+      "assumption_rationale": "This narrows the undefined scope to the core production data store, which holds the TODO records that the backup requirement names.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-012",
+          "quote": "Target RPO: 15 minutes unless XATA agrees otherwise."
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-012",
+          "quote": "Target RTO: 30 minutes."
+        }
+      ]
+    },
+    {
+      "question": "What constitutes a 'major failure' for the restoration requirement, and what restoration time or success criteria apply?",
+      "question_id": 45,
+      "status": "partially_answered",
+      "answer": "The NFR sets a restoration target but does not define 'major failure'. The stated targets are RTO of 30 minutes and RPO of 15 minutes, and application-failure recovery is to restore service within 30 minutes.",
+      "remaining_question": "What events qualify as a 'major failure', and what success criteria (for example, data-loss tolerance or verification steps) define a successful restoration?",
+      "proposed_assumption": "Treat any failure that requires restoring production data or services from backup as a major failure subject to the 30-minute RTO and 15-minute RPO.",
+      "assumption_rationale": "This gives the bidder a measurable baseline for restoration design and testing until XATA defines the term.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-012",
+          "quote": "Solution shall support restoration after major failure."
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-012",
+          "quote": "Target RTO: 30 minutes."
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-004",
+          "quote": "Service restored within 30 minutes"
+        }
+      ]
+    },
+    {
+      "question": "Which browsers and versions make up 'major enterprise browsers' beyond Chrome and Edge, and who approves browser-specific functionality?",
+      "question_id": 46,
+      "status": "partially_answered",
+      "answer": "Chrome and Edge are cited as examples of major enterprise browsers, and the list is not exhaustive. Browser-specific functionality requires approval, but the approver is not named.",
+      "remaining_question": "Which other browsers and versions must be supported, and who is authorized to approve browser-specific functionality?",
+      "proposed_assumption": "Treat current versions of Chrome and Edge as the minimum supported browsers until XATA names any additional browsers.",
+      "assumption_rationale": "This gives the design a concrete baseline for browser testing while XATA confirms the full browser list and approver.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-013",
+          "quote": "Support current versions of major enterprise browsers such as Chrome and Edge."
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-013",
+          "quote": "Avoid browser-specific functionality unless approved."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-009",
+          "quote": "System shall provide a web interface through supported browsers."
+        }
+      ]
+    },
+    {
+      "question": "What is the required frequency for periodic recovery procedure testing?",
+      "question_id": 47,
+      "status": "needs_human_review",
+      "answer": null,
+      "remaining_question": "What frequency (for example, annually or per release) must XBS use for periodic testing of the recovery procedures, and who approves that schedule?",
+      "proposed_assumption": "Require a full recovery test before production acceptance and then at least annually.",
+      "assumption_rationale": "The NFR requires periodic testing and production acceptance evidence, so a pre-go-live test plus an annual cadence gives a defensible default until XATA sets the frequency.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-015",
+          "quote": "Recovery procedures shall be tested periodically."
+        }
+      ]
+    },
+    {
+      "question": "What are the XATA authorization rules and XATA data retention and deletion policies referenced by the privacy requirements, and are they provided to the bidder?",
+      "question_id": 48,
+      "status": "needs_human_review",
+      "answer": null,
+      "remaining_question": "Will XATA provide its authorization rules and its data retention and deletion policy to the bidder, and if so, when and in what form?",
+      "proposed_assumption": "Use the BRD role descriptions and business rules as the interim authorization baseline until XATA supplies its formal authorization rules.",
+      "assumption_rationale": "The BRD defines roles and authorization-related rules, which gives design work a provisional basis while the formal XATA documents are outstanding.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-014",
+          "quote": "Access to personal/team information shall follow XATA authorization rules."
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-014",
+          "quote": "Data retention and deletion shall follow XATA policy."
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-013",
+          "quote": "Only authorized users can assign or modify TODOs."
+        }
+      ]
+    },
+    {
+      "question": "What does 'XBS' refer to, and what is its role relative to the solution?",
+      "question_id": 49,
+      "status": "answered",
+      "answer": "XBS is XATA's delivery partner and implementation partner. It is responsible for designing and implementing the TODO Management Platform, proposing the technical architecture based on the BRD and NFR, and documenting the dependencies needed to restore the service.",
+      "remaining_question": null,
+      "proposed_assumption": null,
+      "assumption_rationale": null,
+      "evidence": [
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-001",
+          "quote": "Delivery Partner: XBS"
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-016",
+          "quote": "XBS | Implementation Partner"
+        },
+        {
+          "document": "XATA_TODO_BRD.docx",
+          "chunk_id": "XATA_TODO_BRD.docx-014",
+          "quote": "XBS will propose the technical architecture based on the BRD and NFR."
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-015",
+          "quote": "XBS shall document dependencies required to restore the service."
+        }
+      ]
+    },
+    {
+      "question": "The priority table assigns Must or Should to NFR categories but does not state the underlying NFR statements, thresholds, units, or measurement criteria for each category. Which specific requirements sit under each category?",
+      "question_id": 50,
+      "status": "partially_answered",
+      "answer": "The priority table does not restate the requirements, but the NFR document contains them in sections that match the category names: Security (section 5), Performance (section 2, NFR-PERF-001 to 005), Availability (section 3, NFR-AVL-001 to 003), Data & Integrity (section 6), Backup & Recovery (section 11), Usability (section 7), Maintainability (section 9), Accessibility (section 8), and Observability & Operations (section 10, mapped to 'Advanced observability'). Thresholds and units exist for Performance, Availability and Backup & Recovery, for example RPO and RTO targets, but Security, Usability and Maintainability have qualitative statements with no measurement criteria.",
+      "remaining_question": "Which priority applies to Scalability, Compatibility, Privacy, Disaster Recovery and NFR Acceptance, which have no row in the priority table? Also, what measurable criteria will be used to verify the qualitative Security, Usability, Maintainability and Accessibility requirements?",
+      "proposed_assumption": "Treat Scalability, Compatibility, Privacy and Disaster Recovery as Must until XATA confirms otherwise.",
+      "assumption_rationale": "Section 15 requires XBS to demonstrate compliance with all agreed NFRs before production acceptance, so unlisted categories need a provisional priority to be testable.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-017",
+          "quote": "Security | Must"
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-017",
+          "quote": "Accessibility | Should"
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-003",
+          "quote": "NFR-PERF-001 | Normal page/API response time | ≤ 2 seconds for 95% of requests under normal load"
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-004",
+          "quote": "NFR-AVL-001 | Monthly availability | ≥ 99.5%, excluding agreed maintenance windows"
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-012",
+          "quote": "Target RPO: 15 minutes unless XATA agrees otherwise."
+        }
+      ]
+    },
+    {
+      "question": "The source does not define the obligation strength of 'Must' versus 'Should'. Is a 'Should' category excluded from the production acceptance demonstration required by the NFR acceptance section?",
+      "question_id": 51,
+      "status": "needs_human_review",
+      "answer": null,
+      "remaining_question": "Are the Should-priority NFR categories (Accessibility and Advanced observability) included in or excluded from the production acceptance demonstration, and what do Must and Should mean for acceptance?",
+      "proposed_assumption": "Treat the Should-priority categories as included in the production acceptance evidence unless XATA explicitly agrees to exclude them.",
+      "assumption_rationale": "Section 15 names no priority-based exclusion, so including them is the conservative reading until XATA confirms otherwise.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-016",
+          "quote": "XBS shall demonstrate compliance with agreed NFRs"
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-017",
+          "quote": "Accessibility | Should"
+        }
+      ]
+    },
+    {
+      "question": "The NFR acceptance section refers to 'agreed NFRs' but the supplied evidence does not identify what was agreed or where the agreed NFR baseline is recorded.",
+      "question_id": 52,
+      "status": "needs_human_review",
+      "answer": null,
+      "remaining_question": "What NFRs were formally agreed between XATA and XBS, and where is the agreed NFR baseline recorded?",
+      "proposed_assumption": "Treat the NFR document (Version 1.0) as the working NFR baseline until a signed-off agreement or record is provided.",
+      "assumption_rationale": "The document is versioned and contains concrete targets, so it gives the acceptance section a usable reference point pending confirmation.",
+      "evidence": [
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-016",
+          "quote": "XBS shall demonstrate compliance with agreed NFRs"
+        },
+        {
+          "document": "XATA_TODO_NFR.docx",
+          "chunk_id": "XATA_TODO_NFR.docx-002",
+          "quote": "This document defines the non-functional requirements that XATA expects XBS to consider"
+        }
+      ]
+    }
+  ]
+}

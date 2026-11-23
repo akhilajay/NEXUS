@@ -1,0 +1,15 @@
+{
+  "status": "ready_for_handoff",
+  "sources": [
+    "XATA_TODO_BRD.docx",
+    "XATA_TODO_NFR.docx"
+  ],
+  "artifacts": {
+    "evaluation": "C:\\Users\\prave\\AI_WokrSpace\\NEXUS\\backend\\data\\output\\workflow-full-v2\\ba\\ba-29xmk3ci\\requirements_inventory.eval.json",
+    "inventory": "C:\\Users\\prave\\AI_WokrSpace\\NEXUS\\backend\\data\\output\\workflow-full-v2\\ba\\ba-29xmk3ci\\requirements_inventory.json",
+    "clarifications": "C:\\Users\\prave\\AI_WokrSpace\\NEXUS\\backend\\data\\output\\workflow-full-v2\\ba\\ba-29xmk3ci\\ba_clarifications.json",
+    "functional_document": "C:\\Users\\prave\\AI_WokrSpace\\NEXUS\\backend\\data\\output\\workflow-full-v2\\ba\\ba-29xmk3ci\\functional_solution.md"
+  },
+  "stage": "functional_document",
+  "open_decision_count": 48
+}

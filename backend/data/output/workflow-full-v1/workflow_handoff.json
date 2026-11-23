@@ -1,0 +1,6 @@
+{
+  "status": "failed",
+  "stage": "ba",
+  "ba_handoff": "C:\\Users\\prave\\AI_WokrSpace\\NEXUS\\backend\\data\\output\\workflow-full-v1\\ba\\ba-q07xx83v\\ba_handoff.json",
+  "error": "BA stopped with status processing_error (exit 2)."
+}

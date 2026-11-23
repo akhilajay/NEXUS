@@ -1,0 +1,24 @@
+flowchart TD
+    C1["Route 53 - Amazon Route 53"]
+    C2["WAF - AWS WAF with managed rule groups"]
+    C3["ALB - Application Load Balancer, HTTPS listener with ACM certificate, OIDC action"]
+    C4["ECS Fargate - Amazon ECS on Fargate, 2+ tasks in private subnets"]
+    C5["Cognito - Amazon Cognito user pool, federated to XATA IdP if available"]
+    C6["RDS PostgreSQL - Amazon RDS for PostgreSQL, Multi-AZ, automated backups with PITR"]
+    C7["Secrets Manager - AWS Secrets Manager"]
+    C8["KMS - AWS KMS customer managed keys"]
+    C9["AWS Backup - AWS Backup vault with RDS backup plan"]
+    C10["CloudWatch - CloudWatch Logs, metrics, alarms, Synthetics canary, CloudTrail"]
+    C1 -->|DNS resolves the app name to the ALB.| C3
+    C2 -->|WAF inspects inbound requests on the ALB.| C3
+    C3 -->|ALB runs the OIDC login flow with Cognito.| C5
+    C3 -->|HTTPS forwarding of authenticated requests to healthy tasks.| C4
+    C4 -->|App reads and writes TODO data over TLS.| C6
+    C4 -->|Task role reads DB credentials at startup or rotation.| C7
+    C7 -->|Secret values encrypted with KMS.| C8
+    C6 -->|Database storage and snapshots encrypted with KMS.| C8
+    C6 -->|Snapshots and backup copies protected in the vault.| C9
+    C9 -->|Vault encrypted with KMS.| C8
+    C3 -->|ALB metrics and access logs.| C10
+    C4 -->|App logs with request IDs, metrics and alarms.| C10
+    C6 -->|Database metrics and alarms.| C10

@@ -8,7 +8,7 @@
     "passed": true,
     "expected_id_count": 23,
     "matched_id_count": 23,
-    "unnumbered_record_count": 104,
+    "unnumbered_record_count": 105,
     "missing_ids": [],
     "unexpected_ids": [],
     "repeated_ids": {},
@@ -18,12 +18,12 @@
     "passed": true,
     "expected_id_count": 23,
     "matched_id_count": 23,
-    "unnumbered_record_count": 104,
+    "unnumbered_record_count": 105,
     "missing_ids": [],
     "unexpected_ids": [],
     "repeated_ids": {},
     "source_chunks_for_missing_ids": {}
   },
   "repair_results": [],
-  "inventory_path": "data\\output\\requirements_inventory_integrated.json"
+  "inventory_path": "C:\\Users\\prave\\AI_WokrSpace\\NEXUS\\backend\\data\\output\\workflow-full-v1\\ba\\ba-q07xx83v\\requirements_inventory.json"
 }

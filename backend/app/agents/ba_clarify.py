@@ -1,5 +1,6 @@
 import argparse
 import json
+import logging
 import os
 import re
 from pathlib import Path
@@ -14,6 +15,8 @@ from app.agents.ba_eval import evaluate_ids
 from app.models.requirements import RequirementsInventory
 from app.storage.neo4j_store import Neo4jStore
 
+
+LOG = logging.getLogger(__name__)
 
 BACKEND_DIR = Path(__file__).resolve().parents[2]
 
@@ -158,12 +161,19 @@ def clarify_batch(
     evidence: list[dict],
     chunks_by_key: dict[tuple[str, str], str],
     max_tokens: int,
+    feedback: str | None = None,
 ) -> list[Clarification]:
     request = {
         "questions": questions,
         "evidence": evidence,
         "output_schema": ClarificationBatch.model_json_schema(),
     }
+    if feedback is not None:
+        request["retry_instruction"] = (
+            "The previous result failed citation validation: " + feedback
+            + " Copy only exact text from the supplied excerpts. "
+              "If they do not answer the question, use needs_human_review."
+        )
     response = client.messages.create(
         model=model,
         max_tokens=max_tokens,
@@ -174,6 +184,8 @@ def clarify_batch(
         }],
     )
 
+    LOG.info("Claude stop=%s input_tokens=%d output_tokens=%d", response.stop_reason,
+             response.usage.input_tokens, response.usage.output_tokens)
     if response.stop_reason == "max_tokens":
         raise OutputLimitReached()
 
@@ -193,7 +205,9 @@ def clarify_batch(
         text = fenced_json.group("body").strip()
 
     batch = ClarificationBatch.model_validate_json(text)
-    validate_batch(batch, questions, chunks_by_key)
+    expected = sorted(question["question_id"] for question in questions)
+    if sorted(result.question_id for result in batch.results) != expected:
+        raise ValueError(f"Claude must return exactly one result per question in {expected}.")
     return batch.results
 
 
@@ -206,7 +220,7 @@ def check_batch(
     max_tokens: int,
 ) -> list[dict]:
     question_ids = [question["question_id"] for question in questions]
-    print(f"Checking question IDs {question_ids}")
+    LOG.info("Checking question IDs %s against %d chunks.", question_ids, len(evidence))
 
     try:
         results = clarify_batch(
@@ -214,7 +228,7 @@ def check_batch(
         )
     except OutputLimitReached:
         if len(questions) == 1:
-            print(f"Question {question_ids[0]} still hit the output limit.")
+            LOG.warning("Question %d still hit the output limit.", question_ids[0])
             return [{
                 "question_id": question_ids[0],
                 "status": "processing_error",
@@ -223,7 +237,7 @@ def check_batch(
             }]
 
         midpoint = len(questions) // 2
-        print(f"Output limit reached for {question_ids}. Splitting the batch.")
+        LOG.info("Output limit reached for %s. Splitting the batch.", question_ids)
         return (
             check_batch(
                 client, model, questions[:midpoint], evidence,
@@ -235,7 +249,44 @@ def check_batch(
             )
         )
 
-    return [result.model_dump(mode="json") for result in results]
+    by_id = {result.question_id: result for result in results}
+    checked = []
+    for question in questions:
+        question_id = question["question_id"]
+        result = by_id[question_id]
+        try:
+            validate_batch(ClarificationBatch(results=[result]), [question], chunks_by_key)
+        except ValueError as exc:
+            LOG.warning("Question %d failed validation: %s. Retrying once.", question_id, exc)
+            keys = {(ref["document"], ref["chunk_id"]) for ref in question["sources"]}
+            keys.update((ref.document, ref.chunk_id) for ref in result.evidence)
+            retry_evidence = [
+                chunk for chunk in evidence
+                if (chunk["document"], chunk["chunk_id"]) in keys
+            ] or evidence
+            LOG.info("Question %d retry evidence: %s", question_id,
+                     [chunk["chunk_id"] for chunk in retry_evidence])
+            retry_keys = {
+                (chunk["document"], chunk["chunk_id"]): chunk["text"]
+                for chunk in retry_evidence
+            }
+            try:
+                [result] = clarify_batch(
+                    client, model, [question], retry_evidence, retry_keys, max_tokens,
+                    feedback=str(exc),
+                )
+                validate_batch(ClarificationBatch(results=[result]), [question], retry_keys)
+            except (ValueError, OutputLimitReached) as retry_error:
+                LOG.warning("Question %d sent to human review after retry: %s", question_id,
+                            str(retry_error) or "output token limit reached")
+                result = Clarification(
+                    question_id=question_id, status="needs_human_review", answer=None,
+                    remaining_question=question["question"], evidence=[],
+                )
+        LOG.info("Question %d final status=%s; verified citations=%s", question_id,
+                 result.status, [quote.chunk_id for quote in result.evidence])
+        checked.append(result.model_dump(mode="json"))
+    return checked
 
 
 def main() -> int:
@@ -260,6 +311,9 @@ def main() -> int:
     if args.output.resolve() == args.inventory.resolve():
         parser.error("--output must be different from --inventory.")
 
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s [BA clarification] %(message)s",
+                        datefmt="%H:%M:%S")
+    logging.getLogger("httpx").setLevel(logging.WARNING)
     load_dotenv(BACKEND_DIR / ".env", override=True)
 
     try:

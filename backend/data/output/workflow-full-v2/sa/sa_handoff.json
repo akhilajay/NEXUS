@@ -1,0 +1,134 @@
+{
+  "status": "ready_for_review",
+  "scope": "full_draft",
+  "focus_requirement_id": null,
+  "ba_handoff": "C:\\Users\\prave\\AI_WokrSpace\\NEXUS\\backend\\data\\output\\workflow-full-v2\\ba\\ba-29xmk3ci\\ba_handoff.json",
+  "sources": [
+    "XATA_TODO_BRD.docx",
+    "XATA_TODO_NFR.docx"
+  ],
+  "source_chunks_read": [
+    "XATA_TODO_NFR.docx-003",
+    "XATA_TODO_NFR.docx-004",
+    "XATA_TODO_NFR.docx-006",
+    "XATA_TODO_NFR.docx-012"
+  ],
+  "coverage_counts": {
+    "addressed": 44,
+    "gap": 34,
+    "requires_decision": 42
+  },
+  "rework_history": [
+    {
+      "round": 1,
+      "target_ids": [
+        "BA-0014",
+        "BA-0015"
+      ],
+      "reviewed_ids": [
+        "BA-0009",
+        "BA-0010",
+        "BA-0011",
+        "BA-0012",
+        "BA-0013",
+        "BA-0014",
+        "BA-0015",
+        "BA-0016",
+        "BA-0017"
+      ],
+      "before": {
+        "addressed": 42,
+        "gap": 37,
+        "requires_decision": 41
+      },
+      "after": {
+        "addressed": 44,
+        "gap": 34,
+        "requires_decision": 42
+      },
+      "closed_gap_ids": [
+        "BA-0014",
+        "BA-0015"
+      ],
+      "regressed_ids": [],
+      "outcome": "accepted"
+    },
+    {
+      "round": 1,
+      "target_ids": [
+        "BA-0017"
+      ],
+      "reviewed_ids": [
+        "BA-0009",
+        "BA-0010",
+        "BA-0011",
+        "BA-0012",
+        "BA-0013",
+        "BA-0014",
+        "BA-0015",
+        "BA-0016",
+        "BA-0017",
+        "BA-0018",
+        "BA-0019",
+        "BA-0020",
+        "BA-0021",
+        "BA-0022",
+        "BA-0023"
+      ],
+      "before": {
+        "addressed": 44,
+        "gap": 34,
+        "requires_decision": 42
+      },
+      "after": {
+        "addressed": 41,
+        "gap": 36,
+        "requires_decision": 43
+      },
+      "closed_gap_ids": [],
+      "regressed_ids": [
+        "BA-0010",
+        "BA-0016",
+        "BA-0020",
+        "BA-0023"
+      ],
+      "outcome": "rejected",
+      "reason": "No targeted gap closed without a coverage regression."
+    },
+    {
+      "round": 1,
+      "target_ids": [
+        "BA-0053"
+      ],
+      "reviewed_ids": [
+        "BA-0050",
+        "BA-0051",
+        "BA-0052",
+        "BA-0053",
+        "BA-0054"
+      ],
+      "before": {
+        "addressed": 44,
+        "gap": 34,
+        "requires_decision": 42
+      },
+      "after": {
+        "addressed": 44,
+        "gap": 34,
+        "requires_decision": 42
+      },
+      "closed_gap_ids": [],
+      "regressed_ids": [
+        "BA-0052"
+      ],
+      "outcome": "rejected",
+      "reason": "No targeted gap closed without a coverage regression."
+    }
+  ],
+  "artifacts": {
+    "architecture_json": "C:\\Users\\prave\\AI_WokrSpace\\NEXUS\\backend\\data\\output\\workflow-full-v2\\sa\\architecture.json",
+    "architecture_drawio": "C:\\Users\\prave\\AI_WokrSpace\\NEXUS\\backend\\data\\output\\workflow-full-v2\\sa\\architecture.drawio",
+    "architecture_mermaid": "C:\\Users\\prave\\AI_WokrSpace\\NEXUS\\backend\\data\\output\\workflow-full-v2\\sa\\architecture.mmd",
+    "architecture_document": "C:\\Users\\prave\\AI_WokrSpace\\NEXUS\\backend\\data\\output\\workflow-full-v2\\sa\\architecture.md"
+  }
+}
